@@ -108,6 +108,9 @@ navbar-var-length: false
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
 # --- Background colour options --- #
+site-css:
+  - "/assets/css/custom.css"
+
 # Colour values can be any valid CSS colour
 
 navbar-col: "#CFE9FF"          # light blue
