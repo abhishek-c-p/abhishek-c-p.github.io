@@ -3,6 +3,12 @@ layout: page
 title: Teaching
 ---
 
+<!-- MathJax for LaTeX support on this page -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 ## Teaching experience
 
 - Graduate Teaching Assistant, Wayne State University  
@@ -12,16 +18,26 @@ title: Teaching
 I enjoy designing explanations, problem sets, and lab activities that connect physics ideas to real-world contexts and
 students' everyday intuition.
 
-## Education
+## Example: LaTeX-rendered equations
 
-- PhD in Physics, Wayne State University, Detroit, USA (in progress)  
-  *Theoretical condensed matter physics; superconductivity and Josephson junctions.*
+Inline example: the kinematic equation  
+$s(t) = \frac{1}{2} a t^2 + v_0 t + s_0$.
 
-- BSc / MSc in Physics – *[Add your institution and year here]*  
+Display equation:
 
-## Outreach & mentoring
+$$
+F = m a
+$$
 
-I am interested in:
-- Making physics more accessible for students from non-traditional and under-represented backgrounds  
-- Developing clear, self-paced learning materials for introductory physics  
-- Exploring physics education research and evidence-based teaching practices
+A slightly more complex one:
+
+$$
+I = \int_{-\infty}^{\infty} e^{-x^2}\, dx = \sqrt{\pi}
+$$
+
+## Example: showing LaTeX *code* for students to copy
+
+```latex
+\begin{equation}
+s(t) = \frac{1}{2} a t^2 + v_0 t + s_0
+\end{equation}
