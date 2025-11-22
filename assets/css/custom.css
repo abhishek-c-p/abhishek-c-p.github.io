@@ -29,19 +29,19 @@ h1,
 .page-heading h1,
 .post-heading h1,
 .header-section h1 {
-  color: #f6f0a6 !important; /* light yellow */
+  color: #4deeea !important; /* blue */
   font-weight: 800;
 }
 
 /* Section headings */
 h2, h3 {
-  color: #a9d6ff !important; /* light blue */
+  color: #74ee15 !important; /* green */
   font-weight: 700;
 }
 
 /* Smaller headings */
 h4, h5, h6 {
-  color: #c9d1d9 !important;
+  color: 	#ffe700 !important; /*yellow*/
 }
 
 /* Remove any accidental underline pseudo-elements */
@@ -77,12 +77,49 @@ h2::after, h3::after {
   box-shadow: none !important;
 }
 
-/* navbar text */
-.navbar-custom .nav-link,
-.navbar-custom .navbar-brand {
-  color: #e6edf3 !important;
-  letter-spacing: 1px;
-  font-weight: 700;
+/* ================================
+   NAVBAR BACKGROUND ONLY
+   (transparent at top, solid on scroll)
+================================ */
+
+/* At top of page -> transparent */
+.navbar-custom.top-nav-regular {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* After scrolling -> solid tinted bar */
+.navbar-custom.top-nav-short,
+.navbar-custom.top-nav-short-permanent {
+  background: rgba(15, 35, 60, 0.95) !important;  /* your light blue tint */
+  backdrop-filter: blur(6px) !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+/* ================================
+   NEON MAGENTA ACTIVE NAV ITEM
+================================ */
+.navbar-nav .nav-item.active > .nav-link,
+.navbar-nav .nav-link.active {
+  color: #ff4fd8 !important;
+  text-shadow: 0 0 6px rgba(255,79,216,0.9),
+               0 0 14px rgba(255,79,216,0.7);
+  font-weight: 800 !important;
+  position: relative;
+}
+
+.navbar-nav .nav-item.active > .nav-link::after,
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  bottom: -8px;
+  height: 2px;
+  background: #ff4fd8;
+  box-shadow: 0 0 10px rgba(255,79,216,1);
+  border-radius: 2px;
 }
 
 /* ================================
