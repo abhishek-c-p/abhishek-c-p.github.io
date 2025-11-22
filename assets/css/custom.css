@@ -150,3 +150,7 @@ footer * {
 body, .page-content {
   background: #0b0d10 !important;
 }
+.navbar-custom, .navbar {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
