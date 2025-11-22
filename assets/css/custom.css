@@ -165,13 +165,21 @@ body, .page-content {
   padding-top: 0 !important;
 }
 
-/* Make the video header start closer to the navbar */
+/* ===== Video header size (so title sits on video, no black band) ===== */
 .video-header {
-  min-height: 50px;               /* keep nice tall header */
-  padding-top: 1px !important;    /* was 140px -> too much gap */
-  padding-bottom: 70px !important;
+  position: relative;
+  min-height: 260px !important;     /* make header tall enough */
+  padding-top: 90px !important;     /* space for fixed navbar */
+  padding-bottom: 90px !important;
   display: flex;
   align-items: center;
+}
+
+/* don't kill the header padding globally */
+.header-section,
+.intro-header {
+  margin-top: 0 !important;
+  /* REMOVE padding-top:0 from here if you have it */
 }
 
 /* Hard remove any divider line under navbar */
