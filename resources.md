@@ -11,12 +11,4 @@ permalink: /resources/
       PHY 2130 / 2140 equation sheets, derivations, examples
     </div>
   </a>
-
-  <!-- You can add more boxes later -->
-  <!--
-  <a class="resource-card" href="/resources/lab-materials/">
-    <div class="resource-card-title">Lab Materials</div>
-    <div class="resource-card-subtitle">Manuals, handouts, rubrics</div>
-  </a>
-  -->
 </div>

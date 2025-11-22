@@ -20,15 +20,13 @@ author: Abhishek C P
 # --- List of links in the navigation bar --- #
 ###############################################
 
-
 navbar-links:
   About: "aboutme"
   Research: "research"
   Publications: "publications"
   Teaching: "teaching"
-  Resources: "resources"        
+  Resources: "resources"
   CV: "doc/Abhishek_CV__teaching (1).pdf"
-
 
 ################
 # --- Logo --- #
@@ -117,17 +115,17 @@ site-css:
 
 # Colour values can be any valid CSS colour
 
-navbar-col: "#CFE9FF"          # light blue
-navbar-text-col: "#003366"     # dark blue text
-navbar-children-col: "#CFE9FF" # dropdown menus
-page-col: "#FFFFFF"
+navbar-col: "#0d1117"
+navbar-text-col: "#e6edf3"
+navbar-children-col: "#0d1117"
+page-col: "#0b0d10"
 
-link-col: "#0056B3"
-hover-col: "#003F7F"
+link-col: "#7aa2ff"
+hover-col: "#a5bfff"
 
-footer-col: "#CFE9FF"          # light blue footer
-footer-text-col: "#003366"
-footer-link-col: "#003366"
+footer-col: "#0d1117"
+footer-text-col: "#8b949e"
+footer-link-col: "#e6edf3"
 
 
 # Alternatively, the navbar, footer, and page background can be set to an image
@@ -284,4 +282,3 @@ plugins:
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
-
