@@ -8,6 +8,7 @@
 ############################
 # --- Required options --- #
 ############################
+theme: jekyll-theme-cayman   # example
 
 # Name of website
 title: Abhishek C P
