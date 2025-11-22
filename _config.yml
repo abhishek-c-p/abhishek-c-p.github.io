@@ -20,12 +20,15 @@ author: Abhishek C P
 # --- List of links in the navigation bar --- #
 ###############################################
 
+
 navbar-links:
   About: "aboutme"
   Research: "research"
   Publications: "publications"
   Teaching: "teaching"
+  Resources: "resources"        
   CV: "doc/Abhishek_CV__teaching (1).pdf"
+
 
 ################
 # --- Logo --- #
