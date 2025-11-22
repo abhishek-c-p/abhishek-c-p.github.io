@@ -1,38 +1,35 @@
-{% if layout.common-ext-js %}
-  {% for js in layout.common-ext-js %}
-    {% include ext-js.html js=js %}
-  {% endfor %}
-{% endif %}
+<footer class="video-footer">
+  <!-- Background video -->
+  <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="/assets/img/bgimage.png" aria-hidden="true">
+    <source src="/assets/video/footer.mp4" type="video/mp4">
+  </video>
+  <div class="footer-overlay"></div>
 
-{% if layout.common-js %}
-  {% for js in layout.common-js %}
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    {% if js contains 'jquery' %}
-      <script>
-        if (typeof jQuery == 'undefined') {
-          document.write('<script src="{{ js | relative_url }}"></scr' + 'ipt>');
-        }
-      </script>
-    {% else %}
-      <script src="{{ js | relative_url }}"></script>
-    {% endif %}
-  {% endfor %}
-{% endif %}
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
 
-{% if site.site-js %}
-  {% for js in site.site-js %}
-    <script src="{{ js | relative_url }}"></script>
-  {% endfor %}
-{% endif %}
+        {% include social-networks-links.html %}
 
-{% if page.ext-js %}
-  {% for js in page.ext-js %}
-    {% include ext-js.html js=js %}
-  {% endfor %}
-{% endif %}
+        <!-- Quote -->
+        <div class="footer-quote">Memento mori</div>
 
-{% if page.js %}
-  {% for js in page.js %}
-    <script src="{{ js | relative_url }}"></script>
-  {% endfor %}
-{% endif %}
+        <p class="copyright text-muted">
+          © {{ site.time | date: "%Y" }} {{ site.author }}
+          {% if site.edit_page_button %}
+            &nbsp;•&nbsp;
+            <a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}"
+               class="text_muted">Edit page</a>
+          {% endif %}
+        </p>
+
+        {% unless site.remove-ads %}
+        <p class="theme-by text-muted">
+          Powered by <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+        </p>
+        {% endunless %}
+
+      </div>
+    </div>
+  </div>
+</footer>
