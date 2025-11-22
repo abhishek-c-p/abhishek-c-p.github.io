@@ -57,14 +57,22 @@ h2::after, h3::after {
 }
 
 /* ================================
-   NAVBAR LOOK
+   NAVBAR LOOK (transparent at top, solid on scroll)
 ================================ */
-.navbar-custom,
-.navbar-custom.top-nav-regular,
+
+/* TOP of page (regular nav) -> transparent so header/background shows */
+.navbar-custom.top-nav-regular {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* After scroll (short nav) -> solid tinted bar */
 .navbar-custom.top-nav-short,
 .navbar-custom.top-nav-short-permanent {
-  background: rgba(15, 35, 60, 0.95) !important;   /* soft light-blue tint */
-  backdrop-filter: blur(6px);
+  background: rgba(15, 35, 60, 0.95) !important;  /* soft light-blue tint */
+  backdrop-filter: blur(6px) !important;
   border-bottom: none !important;
   box-shadow: none !important;
 }
@@ -76,30 +84,6 @@ h2::after, h3::after {
   letter-spacing: 1px;
   font-weight: 700;
 }
-
-/* Active nav item = neon magenta */
-.navbar-nav .nav-item.active > .nav-link {
-  color: #ff4fd8 !important;
-  text-shadow: 0 0 6px rgba(255,79,216,0.8),
-               0 0 12px rgba(255,79,216,0.6);
-  font-weight: 900;
-  position: relative;
-}
-
-/* neon underline */
-.navbar-nav .nav-item.active > .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0;
-  bottom: -6px;
-  height: 2px;
-  background: #ff4fd8;
-  box-shadow: 0 0 8px rgba(255,79,216,0.9);
-  border-radius: 2px;
-}
-
-/* If theme tries to insert avatar container anyway, hide it */
-.avatar-container { display: none !important; }
 
 /* ================================
    FOOTER VIDEO
