@@ -249,13 +249,3 @@ footer * {
 }
 
 
-/* Footer quote styling */
-.footer-quote {
-  margin: 1.2rem 0 0.6rem;
-  text-align: center;
-  font-size: 0.95rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #c9d1d9;          /* soft readable gray */
-  opacity: 0.9;
-}
