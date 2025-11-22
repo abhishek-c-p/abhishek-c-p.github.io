@@ -1,11 +1,10 @@
 /* =========================================
-   Abhishek site — FINAL clean theme
+   Abhishek site — CLEAN final theme
    Dark body + readable text
    H1 big titles: light yellow
    H2/H3 subheads: light blue
    Neon active navbar
-   Video in header/footer only
-   Navbar transparent on header only
+   Footer-only video
 ========================================= */
 
 /* ----- Body + text readability ----- */
@@ -25,13 +24,12 @@ small, .text-muted, .post-meta, .footer-links {
 }
 
 /* ----- Headings ----- */
-/* Default heading font weights */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   letter-spacing: 0.2px;
 }
 
-/* Big page titles in header + body H1 */
+/* Big page titles (Research / Teaching / etc.) */
 h1,
 .intro-header .page-heading h1,
 .intro-header .post-heading h1,
@@ -45,12 +43,12 @@ h2, h3 {
   color: #a9d6ff !important;   /* light blue */
 }
 
-/* Smaller headings stay near-white */
+/* Smaller headings near-white */
 h4, h5, h6 {
   color: #e6edf3 !important;
 }
 
-/* Remove any short underline from headings */
+/* Remove any little underline bars from headings */
 h2::after {
   content: none !important;
   display: none !important;
@@ -59,17 +57,17 @@ h2::after {
 /* Reduce “Hi, I’m Abhishek” size on home */
 .intro-header .page-heading h1,
 .intro-header .post-heading h1 {
-  font-size: 3rem !important;  /* tweak 2.6–3.2 */
+  font-size: 3rem !important;  /* tweak 2.6–3.2 if you want */
 }
 
-/* Subtitle under big title */
+/* Subtitle under the big title */
 .intro-header .page-subheading,
 .intro-header .post-subheading {
   color: #c9d1d9 !important;
   font-size: 1.25rem !important;
 }
 
-/* ----- Neon active navbar ----- */
+/* ----- Navbar styling ----- */
 .navbar-nav .nav-link {
   color: #e6edf3 !important;
   opacity: 0.9;
@@ -80,8 +78,9 @@ h2::after {
   opacity: 1;
 }
 
+/* Neon magenta active page */
 .navbar-nav .nav-item.active > .nav-link {
-  color: #ff4fd8 !important; /* neon magenta */
+  color: #ff4fd8 !important;
   text-shadow: 0 0 6px rgba(255, 79, 216, 0.8),
                0 0 12px rgba(255, 79, 216, 0.6);
   font-weight: 900;
@@ -99,29 +98,25 @@ h2::after {
   border-radius: 2px;
 }
 
-/* Remove any divider line under navbar */
+/* Remove divider line under navbar */
 .navbar-custom, .navbar {
   border-bottom: 0 !important;
   box-shadow: none !important;
 }
 
-/* ----- Video header/footer only ----- */
-.video-header, footer {
+/* Hide navbar avatar bubble (since you don’t want it) */
+.avatar-container {
+  display: none !important;
+}
+
+/* ----- Footer video only ----- */
+footer.video-footer, footer {
   position: relative;
   overflow: hidden;
 }
 
-/* Keep header tall so title sits on video */
-.video-header {
-  min-height: 320px !important;
-  padding-top: 140px !important;   /* space for fixed navbar */
-  padding-bottom: 110px !important;
-  display: flex;
-  align-items: center;
-}
-
-/* Video fills header/footer */
-.bg-video {
+/* Video fills footer */
+footer .bg-video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -131,30 +126,16 @@ h2::after {
   opacity: 0.9;
 }
 
-/* Overlay for readability */
-.header-overlay, .footer-overlay {
+/* Dark overlay for readability */
+footer .footer-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.55);
   z-index: 1;
 }
 
-/* Text above video */
-.video-header .container-md,
-.video-header .page-heading,
-.video-header .post-heading,
+/* Footer text above video */
 footer * {
   position: relative;
   z-index: 2;
-}
-
-/* ----- Navbar transparent ONLY on header ----- */
-.navbar-custom.top-nav-regular {
-  background: transparent !important;
-}
-
-.navbar-custom.top-nav-short,
-.navbar-custom.top-nav-short-permanent {
-  background: rgba(11, 30, 51, 0.96) !important;
-  backdrop-filter: blur(6px);
 }
