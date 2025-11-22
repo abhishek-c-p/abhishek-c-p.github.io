@@ -443,3 +443,26 @@ header .post-heading h1,
   background: rgba(255,79,216,0.10) !important;
   border-color: rgba(255,79,216,0.5);
 }
+
+
+/* =========================
+   FOOTER SOCIAL ICONS FIX
+   ========================= */
+
+/* remove the big bubble */
+footer .footer-links .fa-circle,
+footer .footer-links .fa-stack-2x {
+  display: none !important;
+}
+
+/* make the actual icons neon magenta */
+footer .footer-links .fa-stack-1x,
+footer .footer-links .fa-inverse {
+  color: #ff4fd8 !important;  /* neon magenta */
+}
+
+/* optional: same color on hover (slightly brighter) */
+footer .footer-links a:hover .fa-stack-1x,
+footer .footer-links a:hover .fa-inverse {
+  color: #ff7fe5 !important;
+}
