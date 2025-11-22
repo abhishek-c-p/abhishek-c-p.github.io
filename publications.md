@@ -3,11 +3,12 @@ layout: page
 title: Publications & Preprints
 ---
 
-For the most up-to-date list of my publications and citations, please see my
-[Google Scholar profile](https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID_HERE)
-(once you have one, replace the placeholder ID).
-
-Below is a suggested structure you can fill in with your own work.
+<div class="scholar-btn-wrap">
+  <a class="scholar-btn" href="https://scholar.google.com/citations?user=8xDkAz8AAAAJ&hl=en" target="_blank" rel="noopener">
+    <i class="fas fa-graduation-cap"></i>
+    Google Scholar Profile
+  </a>
+</div>
 
 ## Preprints & publications
 
@@ -16,9 +17,7 @@ Below is a suggested structure you can fill in with your own work.
   *Journal / arXiv identifier, year.*  
   [Optional: link to paper]
 
-- **[Another work]**  
-  Abhishek C P, [co-authors]  
-  *Conference / journal, year.*
+
 
 ## In preparation
 
