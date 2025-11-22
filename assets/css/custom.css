@@ -182,4 +182,21 @@ body, .page-content {
   border-bottom: 0 !important;
   box-shadow: none !important;
 }
+/* ===== Navbar shows header video behind it (top only) ===== */
+
+/* At top of page (regular nav): transparent so video shows through */
+.navbar-custom.top-nav-regular {
+  background: transparent !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+/* After scrolling (short nav): bring back solid tint */
+.navbar-custom.top-nav-short,
+.navbar-custom.top-nav-short-permanent {
+  background: rgba(11, 30, 51, 0.96) !important;  /* your dark blue tint */
+  backdrop-filter: blur(6px);
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
 
