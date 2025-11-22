@@ -31,7 +31,7 @@ permalink: /resources/
         <input type="text" name="subject" placeholder="Subject" required>
         <textarea name="message" rows="6" placeholder="Message" required></textarea>
 
-        <!-- Anti-spam honeypot (hidden field) -->
+        <!-- Anti-spam honeypot -->
         <input type="text" name="_gotcha" style="display:none">
 
         <button type="submit">SEND</button>
