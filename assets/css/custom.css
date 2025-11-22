@@ -154,3 +154,45 @@ body, .page-content {
   border-bottom: none !important;
   box-shadow: none !important;
 }
+/* ===== Fix collapsed video header height/position ===== */
+
+/* Only for pages with video-header (no cover-img) */
+.video-header {
+  position: relative;
+  min-height: 320px;              /* make header tall again */
+  padding-top: 140px !important;  /* pushes title below fixed navbar */
+  padding-bottom: 90px !important;
+  display: flex;
+  align-items: center;            /* vertically center the title area */
+}
+
+/* ensure header content uses full width inside flex */
+.video-header .container-md {
+  width: 100%;
+}
+
+/* keep video filling the whole header area */
+.video-header .bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* overlay stays on top of video */
+.video-header .header-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+/* text above overlay */
+.video-header .page-heading,
+.video-header .post-heading,
+.video-header .container-md * {
+  position: relative;
+  z-index: 2;
+}
