@@ -8,7 +8,14 @@
 ############################
 # --- Required options --- #
 ############################
-theme: jekyll-theme-cayman   # example
+
+
+remote_theme: daattali/beautiful-jekyll
+plugins:
+  - jekyll-remote-theme
+  - jekyll-paginate
+  - jekyll-sitemap
+
 
 # Name of website
 title: Abhishek C P
