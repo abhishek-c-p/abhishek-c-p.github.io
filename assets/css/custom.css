@@ -1,14 +1,7 @@
-/* =========================================
-   Abhishek site — CLEAN final theme
-   Dark body + readable text
-   H1 big titles: light yellow
-   H2/H3 subheads: light blue
-   Neon active navbar
-   Footer-only video
-========================================= */
-
-/* ----- Body + text readability ----- */
-body, .page-content {
+/* ================================
+   GLOBAL DARK THEME + READABILITY
+================================ */
+body, .page-content, .main-content {
   background: #0b0d10 !important;
   color: #e6edf3 !important;
   line-height: 1.7;
@@ -16,77 +9,84 @@ body, .page-content {
 }
 
 p, li, .post-entry, .intro-text {
-  color: inherit !important;
-}
-
-small, .text-muted, .post-meta, .footer-links {
-  color: #c9d1d9 !important;
-}
-
-/* ----- Headings ----- */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 800;
-  letter-spacing: 0.2px;
-}
-
-/* Big page titles (Research / Teaching / etc.) */
-h1,
-.intro-header .page-heading h1,
-.intro-header .post-heading h1,
-header .page-heading h1,
-header .post-heading h1 {
-  color: #fff2a8 !important;   /* light yellow */
-}
-
-/* Section/sub headings */
-h2, h3 {
-  color: #a9d6ff !important;   /* light blue */
-}
-
-/* Smaller headings near-white */
-h4, h5, h6 {
   color: #e6edf3 !important;
 }
 
-/* Remove any little underline bars from headings */
-h2::after {
+/* links */
+a {
+  color: #7aa2ff !important;
+  text-decoration: none;
+}
+a:hover {
+  color: #a5bfff !important;
+}
+
+/* ================================
+   HEADING COLORS
+================================ */
+/* Big page titles: Research / Teaching / Resources */
+h1,
+.page-heading h1,
+.post-heading h1,
+.header-section h1 {
+  color: #f6f0a6 !important; /* light yellow */
+  font-weight: 800;
+}
+
+/* Section headings */
+h2, h3 {
+  color: #a9d6ff !important; /* light blue */
+  font-weight: 700;
+}
+
+/* Smaller headings */
+h4, h5, h6 {
+  color: #c9d1d9 !important;
+}
+
+/* Remove any accidental underline pseudo-elements */
+h2::after, h3::after {
   content: none !important;
   display: none !important;
 }
 
-/* Reduce “Hi, I’m Abhishek” size on home */
+/* Reduce huge home title slightly */
 .intro-header .page-heading h1,
 .intro-header .post-heading h1 {
-  font-size: 3rem !important;  /* tweak 2.6–3.2 if you want */
+  font-size: 3rem !important;
 }
 
-/* Subtitle under the big title */
-.intro-header .page-subheading,
-.intro-header .post-subheading {
-  color: #c9d1d9 !important;
-  font-size: 1.25rem !important;
+/* ================================
+   NAVBAR LOOK
+================================ */
+.navbar-custom,
+.navbar-custom.top-nav-regular,
+.navbar-custom.top-nav-short,
+.navbar-custom.top-nav-short-permanent {
+  background: rgba(15, 35, 60, 0.95) !important;   /* soft light-blue tint */
+  backdrop-filter: blur(6px);
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
-/* ----- Navbar styling ----- */
-.navbar-nav .nav-link {
+/* navbar text */
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand {
   color: #e6edf3 !important;
-  opacity: 0.9;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #a5bfff !important;   /* soft blue hover */
-  opacity: 1;
-}
-
-/* Neon magenta active page */
+/* Active nav item = neon magenta */
 .navbar-nav .nav-item.active > .nav-link {
   color: #ff4fd8 !important;
-  text-shadow: 0 0 6px rgba(255, 79, 216, 0.8),
-               0 0 12px rgba(255, 79, 216, 0.6);
+  text-shadow: 0 0 6px rgba(255,79,216,0.8),
+               0 0 12px rgba(255,79,216,0.6);
   font-weight: 900;
   position: relative;
 }
 
+/* neon underline */
 .navbar-nav .nav-item.active > .nav-link::after {
   content: "";
   position: absolute;
@@ -94,29 +94,24 @@ h2::after {
   bottom: -6px;
   height: 2px;
   background: #ff4fd8;
-  box-shadow: 0 0 8px rgba(255, 79, 216, 0.9);
+  box-shadow: 0 0 8px rgba(255,79,216,0.9);
   border-radius: 2px;
 }
 
-/* Remove divider line under navbar */
-.navbar-custom, .navbar {
-  border-bottom: 0 !important;
-  box-shadow: none !important;
-}
+/* If theme tries to insert avatar container anyway, hide it */
+.avatar-container { display: none !important; }
 
-/* Hide navbar avatar bubble (since you don’t want it) */
-.avatar-container {
-  display: none !important;
-}
-
-/* ----- Footer video only ----- */
-footer.video-footer, footer {
+/* ================================
+   FOOTER VIDEO
+================================ */
+.video-footer {
   position: relative;
   overflow: hidden;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 
-/* Video fills footer */
-footer .bg-video {
+.video-footer .bg-video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -126,26 +121,75 @@ footer .bg-video {
   opacity: 0.9;
 }
 
-/* Dark overlay for readability */
-footer .footer-overlay {
+.video-footer .footer-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.55);
   z-index: 1;
 }
 
-/* Footer text above video */
-footer * {
+/* footer content above video */
+.video-footer .beautiful-jekyll-footer {
   position: relative;
   z-index: 2;
 }
 
+/* Quote */
+.footer-quote {
+  margin: 1.2rem 0 0.6rem;
+  text-align: center;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c9d1d9;
+  opacity: 0.9;
+}
 
-/* ===== Resources page footer-style contact block ===== */
+/* ================================
+   RESOURCES GRID CARDS
+================================ */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.resource-card {
+  background: #11161c;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 1.6rem;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border 0.12s ease;
+}
+
+.resource-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #a9d6ff;
+  margin-bottom: 0.4rem;
+}
+
+.resource-card-subtitle {
+  color: #c9d1d9;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.resource-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(255,79,216,0.25);
+  border-color: rgba(255,79,216,0.6);
+}
+
+/* ================================
+   RESOURCES CONTACT BLOCK
+================================ */
 .resources-contact-footer {
   margin-top: 3rem;
   padding: 2.5rem 1.5rem;
-  background: #0f141a; /* dark panel */
+  background: #0f141a;
   border-top: 1px solid rgba(255,255,255,0.06);
 }
 
@@ -153,7 +197,7 @@ footer * {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.4fr 0.9fr; /* form wider than info */
+  grid-template-columns: 1.4fr 0.9fr;
   gap: 2.2rem;
   align-items: start;
 }
@@ -163,8 +207,9 @@ footer * {
   margin: 0 0 0.4rem 0;
   font-size: 1.9rem;
   letter-spacing: 1px;
-  color: #fff2a8 !important; /* your H1 light yellow */
+  color: #f6f0a6 !important;
 }
+
 .rcf-sub {
   margin-bottom: 1.2rem;
   color: #c9d1d9;
@@ -199,7 +244,7 @@ footer * {
   padding: 0.75rem 1.7rem;
   cursor: pointer;
   letter-spacing: 1px;
-  transition: transform 0.08s ease, box-shadow 0.2s ease;
+  transition: transform 0.08s ease, box-shadow 0.12s ease;
 }
 
 .rcf-form form button:hover {
@@ -210,32 +255,37 @@ footer * {
 /* Right info */
 .rcf-info {
   color: #e6edf3;
-}
-.rcf-info h3 {
-  margin-top: 0.25rem;
-  color: #a9d6ff !important; /* your H2 light blue */
-  font-size: 1.3rem;
-}
-.rcf-info a {
-  color: #e6edf3;
-  text-decoration: none;
-}
-.rcf-info a:hover {
-  color: #a5bfff;
+  font-size: 1rem;
 }
 
-/* Social icons */
+.rcf-info h3 {
+  margin-top: 0.25rem;
+  color: #a9d6ff !important;
+  font-size: 1.3rem;
+}
+
+.rcf-info a {
+  color: #e6edf3 !important;
+}
+
+.rcf-info a:hover {
+  color: #a5bfff !important;
+}
+
+/* socials */
 .rcf-socials {
   margin-top: 1rem;
   display: flex;
   gap: 0.9rem;
   font-size: 2rem;
 }
+
 .rcf-socials a {
   color: #e6edf3;
   opacity: 0.9;
   transition: color 0.2s ease, transform 0.1s ease;
 }
+
 .rcf-socials a:hover {
   color: #ff4fd8;
   transform: translateY(-2px);
@@ -247,5 +297,3 @@ footer * {
     grid-template-columns: 1fr;
   }
 }
-
-
