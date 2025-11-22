@@ -13,23 +13,45 @@
   <div class="collapse navbar-collapse" id="main-navbar">
     <ul class="navbar-nav ml-auto">
       {%- for link in site.navbar-links -%}
-        {%- if link[1].first %}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link[0] }}</a>
+
+        {%- if link[1].first -%}
+          {%- assign active_dropdown = false -%}
+          {%- for childlink in link[1] -%}
+            {%- for linkparts in childlink -%}
+              {%- assign child_url = linkparts[1] | relative_url -%}
+              {%- if page.url == child_url or page.url contains child_url -%}
+                {%- assign active_dropdown = true -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endfor -%}
+
+          <li class="nav-item dropdown {% if active_dropdown %}active{% endif %}">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ link[0] }}
+            </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               {%- for childlink in link[1] -%}
-                {%- for linkparts in childlink %}
-                  <a class="dropdown-item" href="{{ linkparts[1] | relative_url }}">{{ linkparts[0] }}</a>
+                {%- for linkparts in childlink -%}
+                  {%- assign child_url = linkparts[1] | relative_url -%}
+                  <a class="dropdown-item {% if page.url == child_url or page.url contains child_url %}active{% endif %}"
+                     href="{{ child_url }}">
+                    {{ linkparts[0] }}
+                  </a>
                 {%- endfor -%}
-              {%- endfor %}
+              {%- endfor -%}
             </div>
           </li>
-        {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ link[1] | relative_url }}">{{ link[0] }}</a>
+
+        {%- else -%}
+          {%- assign link_url = link[1] | relative_url -%}
+          <li class="nav-item {% if page.url == link_url or page.url contains link_url %}active{% endif %}">
+            <a class="nav-link" href="{{ link_url }}">{{ link[0] }}</a>
           </li>
         {%- endif -%}
+
       {%- endfor -%}
+
       {% if site.post_search %}
         <li class="nav-item">
           <a class="nav-link" id="nav-search-link" href="#" title="Search">
