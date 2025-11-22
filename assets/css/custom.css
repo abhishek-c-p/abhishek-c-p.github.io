@@ -1,79 +1,97 @@
+/* =========================================
+   Abhishek site — FINAL clean theme
+   Dark body + readable text
+   H1 big titles: light yellow
+   H2/H3 subheads: light blue
+   Neon active navbar
+   Video in header/footer only
+   Navbar transparent on header only
+========================================= */
 
-/* ===== Improve readability on dark theme ===== */
-
-/* Main body text */
-body, p, li, .page-content, .post-entry, .intro-text {
-  color: #e6edf3 !important;   /* brighter white */
+/* ----- Body + text readability ----- */
+body, .page-content {
+  background: #0b0d10 !important;
+  color: #e6edf3 !important;
   line-height: 1.7;
-  font-size: 1.05rem;         /* optional: slightly bigger */
+  font-size: 1.05rem;
 }
 
-/* Slightly-muted text (captions, small notes) */
+p, li, .post-entry, .intro-text {
+  color: inherit !important;
+}
+
 small, .text-muted, .post-meta, .footer-links {
   color: #c9d1d9 !important;
 }
 
-/* Headings */
+/* ----- Headings ----- */
+/* Default heading font weights */
 h1, h2, h3, h4, h5, h6 {
-  color: #f0f6fc !important;
+  font-weight: 800;
+  letter-spacing: 0.2px;
 }
 
-/* ===== Reduce the big "Hi, I'm Abhishek." size ===== */
-/* Beautiful Jekyll home header title */
+/* Big page titles in header + body H1 */
+h1,
 .intro-header .page-heading h1,
 .intro-header .post-heading h1,
-.header-section h1,
-.page-heading h1 {
-  font-size: 3rem !important;   /* try 2.6rem if you want smaller */
-  font-weight: 800;
-  color: #f0f6fc !important;
+header .page-heading h1,
+header .post-heading h1 {
+  color: #fff2a8 !important;   /* light yellow */
 }
 
-/* Subtitle under the big title */
-.intro-header .page-heading .page-subheading,
-.intro-header .post-heading .post-subheading {
+/* Section/sub headings */
+h2, h3 {
+  color: #a9d6ff !important;   /* light blue */
+}
+
+/* Smaller headings stay near-white */
+h4, h5, h6 {
+  color: #e6edf3 !important;
+}
+
+/* Remove any short underline from headings */
+h2::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Reduce “Hi, I’m Abhishek” size on home */
+.intro-header .page-heading h1,
+.intro-header .post-heading h1 {
+  font-size: 3rem !important;  /* tweak 2.6–3.2 */
+}
+
+/* Subtitle under big title */
+.intro-header .page-subheading,
+.intro-header .post-subheading {
   color: #c9d1d9 !important;
   font-size: 1.25rem !important;
 }
 
-/* ===== Add some color back ===== */
-
-/* Headings: soft light red (readable, not loud) */
-h1, h2, h3, h4, h5, h6,
-.page-title, .post-title {
-  color: #ffb3b3 !important;   /* very light red */
+/* ----- Neon active navbar ----- */
+.navbar-nav .nav-link {
+  color: #e6edf3 !important;
+  opacity: 0.9;
 }
 
-/* Optional: tiny accent underline for section headings */
-h2 {
-  position: relative;
-  padding-bottom: 6px;
-}
-h2::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 2px;
-  margin-top: 6px;
-  background: rgba(255, 179, 179, 0.6);  /* soft red line */
-  border-radius: 2px;
+.navbar-nav .nav-link:hover {
+  color: #a5bfff !important;   /* soft blue hover */
+  opacity: 1;
 }
 
-/* ===== Neon magenta active navbar item ===== */
 .navbar-nav .nav-item.active > .nav-link {
-  color: #ff4fd8 !important;                 /* neon magenta */
+  color: #ff4fd8 !important; /* neon magenta */
   text-shadow: 0 0 6px rgba(255, 79, 216, 0.8),
                0 0 12px rgba(255, 79, 216, 0.6);
-  font-weight: 800;
+  font-weight: 900;
   position: relative;
 }
 
-/* optional neon underline */
 .navbar-nav .nav-item.active > .nav-link::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 0; right: 0;
   bottom: -6px;
   height: 2px;
   background: #ff4fd8;
@@ -81,44 +99,28 @@ h2::after {
   border-radius: 2px;
 }
 
-/* Remove the short underline under headings */
-h2::after {
-  content: none !important;
-  display: none !important;
+/* Remove any divider line under navbar */
+.navbar-custom, .navbar {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
 }
 
-/* ===== Heading color scheme ===== */
-
-/* Big page titles: H1 (Research / Teaching / etc.) */
-h1, .page-heading h1, .post-heading h1 {
-  color: #B0ED47 !important;   /* light yellow */
-}
-
-/* Section/sub headings: H2 + H3 */
-h2, h3 {
-  color: 	#74ee15 !important;   /* light blue */
-}
-
-/* Optional: keep smaller headings a soft neutral */
-h4, h5, h6 {
-  color: 	#4deeea !important;
-}
-
-/* Big header page title (the huge "Research", "Teaching", etc.) */
-.intro-header .page-heading h1,
-.intro-header .post-heading h1,
-header .page-heading h1,
-header .post-heading h1 {
-  color: #ff4fd8 !important;   /* light yellow */
-}
-
-/* ===== VIDEO header/footer only ===== */
+/* ----- Video header/footer only ----- */
 .video-header, footer {
   position: relative;
   overflow: hidden;
 }
 
-/* video fills the header/footer */
+/* Keep header tall so title sits on video */
+.video-header {
+  min-height: 320px !important;
+  padding-top: 140px !important;   /* space for fixed navbar */
+  padding-bottom: 110px !important;
+  display: flex;
+  align-items: center;
+}
+
+/* Video fills header/footer */
 .bg-video {
   position: absolute;
   inset: 0;
@@ -129,15 +131,15 @@ header .post-heading h1 {
   opacity: 0.9;
 }
 
-/* dark overlay for readability */
+/* Overlay for readability */
 .header-overlay, .footer-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.45);
   z-index: 1;
 }
 
-/* keep text above video */
+/* Text above video */
 .video-header .container-md,
 .video-header .page-heading,
 .video-header .post-heading,
@@ -146,65 +148,13 @@ footer * {
   z-index: 2;
 }
 
-/* body stays clean black */
-body, .page-content {
-  background: #0b0d10 !important;
-}
-.navbar-custom, .navbar {
-  border-bottom: none !important;
-  box-shadow: none !important;
-}
-
-/* */
-/* ===== Tighten gap between navbar and header ===== */
-
-/* Remove any extra top margin the theme adds */
-.header-section,
-.intro-header {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* ===== Video header size (so title sits on video, no black band) ===== */
-.video-header {
-  position: relative;
-  min-height: 260px !important;     /* make header tall enough */
-  padding-top: 90px !important;     /* space for fixed navbar */
-  padding-bottom: 90px !important;
-  display: flex;
-  align-items: center;
-}
-
-/* don't kill the header padding globally */
-.header-section,
-.intro-header {
-  margin-top: 0 !important;
-  /* REMOVE padding-top:0 from here if you have it */
-}
-
-/* Hard remove any divider line under navbar */
-.navbar-custom,
-.navbar,
-.top-nav-regular,
-.top-nav-short-permanent {
-  border-bottom: 0 !important;
-  box-shadow: none !important;
-}
-/* ===== Navbar shows header video behind it (top only) ===== */
-
-/* At top of page (regular nav): transparent so video shows through */
+/* ----- Navbar transparent ONLY on header ----- */
 .navbar-custom.top-nav-regular {
   background: transparent !important;
-  border-bottom: 0 !important;
-  box-shadow: none !important;
 }
 
-/* After scrolling (short nav): bring back solid tint */
 .navbar-custom.top-nav-short,
 .navbar-custom.top-nav-short-permanent {
-  background: rgba(11, 30, 51, 0.96) !important;  /* your dark blue tint */
+  background: rgba(11, 30, 51, 0.96) !important;
   backdrop-filter: blur(6px);
-  border-bottom: 0 !important;
-  box-shadow: none !important;
 }
-
