@@ -447,23 +447,24 @@ header .post-heading h1,
 
 /* ==========================================
    FOOTER SOCIAL ICONS: neon magenta ring
+   (Beautiful Jekyll / FA stack)
    ========================================== */
 
-/* make the background circle hollow + neon outline */
+/* 1) Turn the filled circle into a hollow neon ring */
 footer .footer-links .fa-circle.fa-stack-2x {
-  color: transparent !important;              /* remove fill */
-  -webkit-text-stroke: 2px #ff4fd8;          /* thin neon ring */
+  color: transparent !important;              /* removes the blue fill */
+  -webkit-text-stroke: 2px #ff4fd8;          /* ring thickness + neon magenta */
   text-shadow: 0 0 8px rgba(255,79,216,0.9); /* glow */
 }
 
-/* recolor the actual icons to neon magenta */
+/* 2) Make the actual icons neon magenta */
 footer .footer-links .fa-stack-1x,
 footer .footer-links .fa-inverse {
   color: #ff4fd8 !important;
   text-shadow: 0 0 6px rgba(255,79,216,0.8);
 }
 
-/* hover: a bit brighter */
+/* 3) Hover effect: brighter neon */
 footer .footer-links a:hover .fa-circle.fa-stack-2x {
   -webkit-text-stroke: 2px #ff7fe5;
   text-shadow: 0 0 10px rgba(255,127,229,1);
