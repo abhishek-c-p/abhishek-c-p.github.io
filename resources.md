@@ -15,40 +15,110 @@ permalink: /resources/
 
 <hr>
 
-<h2>Contact me</h2>
+/* ===== Resources page footer-style contact block ===== */
+.resources-contact-footer {
+  margin-top: 3rem;
+  padding: 2.5rem 1.5rem;
+  background: #0f141a; /* dark panel */
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
 
-<form
-  class="contact-card"
-  action="https://formspree.io/f/xyzveolr"
-  method="POST"
->
-  <div class="contact-row">
-    <label>
-      First name
-      <input type="text" name="first_name" required>
-    </label>
+.rcf-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr; /* form wider than info */
+  gap: 2.2rem;
+  align-items: start;
+}
 
-    <label>
-      Email
-      <input type="email" name="email" required>
-    </label>
-  </div>
+/* Left form */
+.rcf-form h2 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+  color: #fff2a8 !important; /* your H1 light yellow */
+}
+.rcf-sub {
+  margin-bottom: 1.2rem;
+  color: #c9d1d9;
+  font-size: 0.98rem;
+}
 
-  <label>
-    Subject
-    <input type="text" name="subject" required>
-  </label>
+.rcf-form form input,
+.rcf-form form textarea {
+  width: 100%;
+  background: #0b0d10;
+  color: #e6edf3;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px;
+  padding: 0.85rem 0.9rem;
+  font-size: 1rem;
+  margin-bottom: 0.85rem;
+  outline: none;
+}
 
-  <label>
-    Message
-    <textarea name="message" rows="6" required></textarea>
-  </label>
+.rcf-form form input:focus,
+.rcf-form form textarea:focus {
+  border-color: #ff4fd8;
+  box-shadow: 0 0 0 2px rgba(255,79,216,0.2);
+}
 
-  <!-- Anti-spam honeypot (hidden) -->
-  <input type="text" name="_gotcha" style="display:none">
+.rcf-form form button {
+  background: #ff4fd8;
+  color: #0b0d10;
+  font-weight: 900;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.7rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: transform 0.08s ease, box-shadow 0.2s ease;
+}
 
-  <!-- Optional: redirect back to Resources after submit -->
-  <input type="hidden" name="_next" value="https://www.abhishekcp.com/resources/">
+.rcf-form form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 14px rgba(255,79,216,0.55);
+}
 
-  <button class="contact-btn" type="submit">Send</button>
-</form>
+/* Right info */
+.rcf-info {
+  color: #e6edf3;
+}
+.rcf-info h3 {
+  margin-top: 0.25rem;
+  color: #a9d6ff !important; /* your H2 light blue */
+  font-size: 1.3rem;
+}
+.rcf-info a {
+  color: #e6edf3;
+  text-decoration: none;
+}
+.rcf-info a:hover {
+  color: #a5bfff;
+}
+
+/* Social icons */
+.rcf-socials {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.9rem;
+  font-size: 2rem;
+}
+.rcf-socials a {
+  color: #e6edf3;
+  opacity: 0.9;
+  transition: color 0.2s ease, transform 0.1s ease;
+}
+.rcf-socials a:hover {
+  color: #ff4fd8;
+  transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .rcf-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
