@@ -168,7 +168,7 @@ body, .page-content {
 /* Make the video header start closer to the navbar */
 .video-header {
   min-height: 50px;               /* keep nice tall header */
-  padding-top: 90px !important;    /* was 140px -> too much gap */
+  padding-top: 1px !important;    /* was 140px -> too much gap */
   padding-bottom: 70px !important;
   display: flex;
   align-items: center;
