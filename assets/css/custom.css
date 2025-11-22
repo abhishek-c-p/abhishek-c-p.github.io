@@ -474,3 +474,16 @@ footer .footer-links a:hover .fa-inverse {
   color: #ff7fe5 !important;
   text-shadow: 0 0 10px rgba(255,127,229,1);
 }
+
+/* ------------------------------------------
+   OVERRIDE: footer social links = no pills
+   ------------------------------------------ */
+footer .footer-social a,
+footer .footer-links a {
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
