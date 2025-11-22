@@ -81,4 +81,9 @@ h2::after {
   border-radius: 2px;
 }
 
+/* Remove the short underline under headings */
+h2::after {
+  content: none !important;
+  display: none !important;
+}
 
