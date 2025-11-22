@@ -9,7 +9,7 @@ permalink: /
 
   <!-- LEFT COLUMN -->
   <div class="home-about-left">
-    <img class="home-avatar" src="/assets/img/abhishek.jpg" alt="Abhishek C P">
+    <img class="home-avatar" src="/assets/img/abhishek.jpeg" alt="Abhishek C P">
 
     <h1 class="home-name">Abhishek C P</h1>
     <div class="home-role">PhD Candidate in Physics</div>
