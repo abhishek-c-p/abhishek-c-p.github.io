@@ -23,7 +23,7 @@ title: Abhishek C P
 # Your name to show in the footer
 author: Abhishek C P
 
-favicon: "/assets/img/favicon.ico"
+# favicon: "/assets/img/favicon.ico"
 
 
 ###############################################
@@ -48,6 +48,7 @@ navbar-links:
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
+favicon : true
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
