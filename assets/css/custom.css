@@ -1,17 +1,37 @@
-/* Make headings a bit smaller site-wide */
 
-h1, .page-title, .post-title {
-  font-size: 2.0rem;
+/* ===== Improve readability on dark theme ===== */
+
+/* Main body text */
+body, p, li, .page-content, .post-entry, .intro-text {
+  color: #e6edf3 !important;   /* brighter white */
+  line-height: 1.7;
+  font-size: 1.05rem;         /* optional: slightly bigger */
 }
 
-h2 {
-  font-size: 1.6rem;
+/* Slightly-muted text (captions, small notes) */
+small, .text-muted, .post-meta, .footer-links {
+  color: #c9d1d9 !important;
 }
 
-h3 {
-  font-size: 1.3rem;
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #f0f6fc !important;
 }
 
-h4 {
-  font-size: 1.1rem;
+/* ===== Reduce the big "Hi, I'm Abhishek." size ===== */
+/* Beautiful Jekyll home header title */
+.intro-header .page-heading h1,
+.intro-header .post-heading h1,
+.header-section h1,
+.page-heading h1 {
+  font-size: 3rem !important;   /* try 2.6rem if you want smaller */
+  font-weight: 800;
+  color: #f0f6fc !important;
+}
+
+/* Subtitle under the big title */
+.intro-header .page-heading .page-subheading,
+.intro-header .post-heading .post-subheading {
+  color: #c9d1d9 !important;
+  font-size: 1.25rem !important;
 }
