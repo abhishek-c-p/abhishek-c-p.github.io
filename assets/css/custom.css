@@ -91,12 +91,12 @@ h2::after {
 
 /* Big page titles: H1 (Research / Teaching / etc.) */
 h1, .page-heading h1, .post-heading h1 {
-  color: #fff2a8 !important;   /* light yellow */
+  color: #ffe89a !important;   /* light yellow */
 }
 
 /* Section/sub headings: H2 + H3 */
 h2, h3 {
-  color: #a9d6ff !important;   /* light blue */
+  color: #8fc8ff !important;   /* light blue */
 }
 
 /* Optional: keep smaller headings a soft neutral */
