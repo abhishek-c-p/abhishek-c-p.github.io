@@ -3,30 +3,21 @@
 {% if page.cover-img %}
   <div id="header-big-imgs" data-num-img={% if page.cover-img.first %}{{ page.cover-img.size }}{% else %}1{% endif %}
     {% for bigimg in page.cover-img %}
-    {% assign imgnum = forloop.index %}
-    {% for imginfo in bigimg %}
-    {% if imginfo[0] %}
-      data-img-src-{{ imgnum }}="{{ imginfo[0] | absolute_url }}"
-      data-img-desc-{{ imgnum }}="{{ imginfo[1] }}"
-    {% else %}
-      data-img-src-{{ imgnum }}="{{ imginfo | absolute_url }}"
-    {% endif %}
-    {% endfor %}
+      {% assign imgnum = forloop.index %}
+      {% for imginfo in bigimg %}
+        {% if imginfo[0] %}
+          data-img-src-{{ imgnum }}="{{ imginfo[0] | absolute_url }}"
+          data-img-desc-{{ imgnum }}="{{ imginfo[1] }}"
+        {% else %}
+          data-img-src-{{ imgnum }}="{{ imginfo | absolute_url }}"
+        {% endif %}
+      {% endfor %}
     {% endfor %}
   ></div>
 {% endif %}
 
 <header class="header-section {% if page.cover-img %}has-img{% endif %}">
-  <div class="intro-header {% if page.cover-img %} big-img {% endif %} {% unless page.cover-img %}video-header{% endunless %}">
-
-    {% unless page.cover-img %}
-      <!-- background video ONLY when no cover image -->
-      <video class="bg-video" autoplay muted loop playsinline>
-        <source src="{{ '/assets/video/header.mp4' | relative_url }}" type="video/mp4">
-      </video>
-      <div class="header-overlay"></div>
-    {% endunless %}
-
+  <div class="intro-header {% if page.cover-img %} big-img {% endif %}">
     {% if page.cover-img or page.title %}
       <div class="container-md">
         <div class="row">
@@ -66,7 +57,9 @@
       </div>
     {% endif %}
 
-    {% if page.cover-img %}<span class='img-desc'></span>{% endif %}
+    {% if page.cover-img %}
+      <span class='img-desc'></span>
+    {% endif %}
   </div>
 
   {% if page.header-extra %}
