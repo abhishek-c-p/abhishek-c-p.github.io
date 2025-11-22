@@ -23,16 +23,22 @@ permalink: /
       <a href="mailto:abhishekcp.research@gmail.com" aria-label="Email">
         <i class="fas fa-envelope"></i>
       </a>
-      <a href="https://github.com/abhishek-c-p" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
+    
+    
       <a href="https://linkedin.com/in/abhishekcp" target="_blank" aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank" aria-label="Instagram">
+    
+      <a href="https://instagram.com/_abhishekcp" target="_blank" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
+    
+      <!-- Google Scholar -->
+      <a href="https://scholar.google.com/citations?user=8xDkAz8AAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
     </div>
+
   </div>
 
   <!-- RIGHT COLUMN -->
