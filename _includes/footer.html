@@ -1,4 +1,11 @@
-<footer>
+<footer class="video-footer">
+
+  <!-- Background video (replace the src if your file name is different) -->
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="{{ '/assets/video/footer.mp4' | relative_url }}" type="video/mp4">
+  </video>
+  <div class="footer-overlay"></div>
+
   <div class="container-md beautiful-jekyll-footer">
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
@@ -13,40 +20,22 @@
           </div>
         {% endif %}
 
-        <!-- ===== Footer quote ===== -->
+        <!-- Quote -->
         <p class="footer-quote">Memento mori</p>
 
         <p class="copyright text-muted">
-        {% if site.author %}
-          {{ site.author }}
-          &nbsp;&bull;&nbsp;
-        {% endif %}
-        {{ site.time | date: '%Y' }}
-
-        {% if site.url-pretty %}
-          &nbsp;&bull;&nbsp;
-          <span class="author-site">
-            <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '/' | absolute_url }}{% endif %}">
-              {{ site.url-pretty }}
-            </a>
-          </span>
-        {% endif %}
-
-        {% if site.matomo %}
-          {% if site.matomo.opt-out %}
+          {% if site.author %}
+            {{ site.author }}
             &nbsp;&bull;&nbsp;
-            <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut"
-               target="_blank" class="text_muted">Do-not-Track</a>
           {% endif %}
-        {% endif%}
+          {{ site.time | date: '%Y' }}
 
-        {% if site.edit_page_button and site.github.repository_url %}
-          &nbsp;&bull;&nbsp;
-          <a title="Edit this page on GitHub"
-             href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}"
-             class="text_muted">Edit page</a>
-        {% endif%}
-
+          {% if site.edit_page_button and site.github.repository_url %}
+            &nbsp;&bull;&nbsp;
+            <a title="Edit this page on GitHub"
+               href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}"
+               class="text_muted">Edit page</a>
+          {% endif %}
         </p>
 
         {% unless site.remove-ads %}
