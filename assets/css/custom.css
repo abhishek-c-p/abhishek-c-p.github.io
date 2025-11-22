@@ -22,54 +22,54 @@ a:hover {
 }
 
 /* ================================
-   HEADING COLORS (FINAL)
+   HEADING COLORS (restore your scheme)
 ================================ */
 
-/* Default H1 inside page body */
-h1,
-.page-heading h1,
-.post-heading h1,
-.header-section h1 {
-  color: #f0f6fc !important;   /* clean white for normal H1s */
-  font-weight: 800;
-}
-
-/* Big top title in header ("Research", "Teaching", etc.) */
+/* BIG page header title (the huge one inside the header band) */
 .intro-header .page-heading h1,
 .intro-header .post-heading h1,
 header .page-heading h1,
 header .post-heading h1 {
   color: #ff4fd8 !important;   /* neon magenta */
   text-shadow: 0 0 10px rgba(255,79,216,0.45);
+  font-weight: 900;
 }
 
-/* Section headings (subtitles) */
+/* H1 inside body (if any) */
+.page-content h1, .main-content h1 {
+  color: #ff4fd8 !important;   /* keep consistent */
+  font-weight: 800;
+}
+
+/* Section headings like “Superconductivity & Josephson junctions” */
 h2, h3 {
   color: #a9d6ff !important;   /* light blue */
-  font-weight: 700;
+  font-weight: 800;
 }
 
 /* Smaller headings */
 h4, h5, h6 {
-  color: #ffe700 !important;   /* soft yellow */
+  color: #ffb3b3 !important;   /* soft light red */
+  font-weight: 700;
 }
 
-/* No underline pseudo-elements */
+/* remove underline pseudo-elements */
 h2::after, h3::after {
   content: none !important;
   display: none !important;
 }
 
-/* Slightly smaller huge home title */
+/* Reduce huge home title slightly */
 .intro-header .page-heading h1,
 .intro-header .post-heading h1 {
   font-size: 3rem !important;
 }
 
 /* ================================
-   NAVBAR (transparent top -> solid on scroll)
+   NAVBAR (transparent top, solid on scroll)
 ================================ */
 
+/* At top of page -> transparent navbar so background shows */
 .navbar-custom.top-nav-regular {
   background: transparent !important;
   backdrop-filter: none !important;
@@ -77,28 +77,33 @@ h2::after, h3::after {
   box-shadow: none !important;
 }
 
+/* After scroll -> solid tinted bar */
 .navbar-custom.top-nav-short,
 .navbar-custom.top-nav-short-permanent {
-  background: rgba(15, 35, 60, 0.95) !important;
+  background: rgba(15, 35, 60, 0.95) !important;  /* light blue tint */
   backdrop-filter: blur(6px) !important;
   border-bottom: none !important;
   box-shadow: none !important;
 }
 
-/* ================================
-   NEON MAGENTA ACTIVE NAV ITEM
-================================ */
+/* remove any divider line */
+.navbar-custom, .navbar {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
 
+/* ACTIVE NAV ITEM -> neon magenta */
 .navbar-nav .nav-item.active > .nav-link,
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-item > .nav-link[aria-current="page"] {
   color: #ff4fd8 !important;
   text-shadow: 0 0 6px rgba(255,79,216,0.9),
                0 0 14px rgba(255,79,216,0.7);
-  font-weight: 800 !important;
+  font-weight: 900 !important;
   position: relative;
 }
 
+/* neon underline */
 .navbar-nav .nav-item.active > .nav-link::after,
 .navbar-nav .nav-link.active::after,
 .navbar-nav .nav-item > .nav-link[aria-current="page"]::after {
@@ -213,12 +218,11 @@ h2::after, h3::after {
   align-items: start;
 }
 
-/* Left form */
 .rcf-form h2 {
   margin: 0 0 0.4rem 0;
   font-size: 1.9rem;
   letter-spacing: 1px;
-  color: #f6f0a6 !important;
+  color: #ff4fd8 !important; /* magenta */
 }
 
 .rcf-sub {
@@ -263,12 +267,6 @@ h2::after, h3::after {
   box-shadow: 0 0 14px rgba(255,79,216,0.55);
 }
 
-/* Right info */
-.rcf-info {
-  color: #e6edf3;
-  font-size: 1rem;
-}
-
 .rcf-info h3 {
   margin-top: 0.25rem;
   color: #a9d6ff !important;
@@ -278,12 +276,10 @@ h2::after, h3::after {
 .rcf-info a {
   color: #e6edf3 !important;
 }
-
 .rcf-info a:hover {
   color: #a5bfff !important;
 }
 
-/* socials */
 .rcf-socials {
   margin-top: 1rem;
   display: flex;
@@ -296,7 +292,6 @@ h2::after, h3::after {
   opacity: 0.9;
   transition: color 0.2s ease, transform 0.1s ease;
 }
-
 .rcf-socials a:hover {
   color: #ff4fd8;
   transform: translateY(-2px);
@@ -304,51 +299,5 @@ h2::after, h3::after {
 
 /* Mobile */
 @media (max-width: 800px) {
-  .rcf-wrap {
-    grid-template-columns: 1fr;
-  }
+  .rcf-wrap { grid-template-columns: 1fr; }
 }
-
-
-/* =========================================
-   1) BIG HEADER PAGE TITLE = MAGENTA
-   (the huge "Research / Teaching / etc." at top)
-========================================= */
-.intro-header .page-heading h1,
-.intro-header .post-heading h1,
-header .page-heading h1,
-header .post-heading h1 {
-  color: #ff4fd8 !important;   /* neon magenta */
-  text-shadow: 0 0 10px rgba(255,79,216,0.45);
-}
-
-/* If any other rule forces header title color, this wins */
-
-/* =========================================
-   2) ACTIVE NAVBAR ITEM = NEON MAGENTA
-========================================= */
-.navbar-nav .nav-item.active > .nav-link,
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-item > .nav-link[aria-current="page"] {
-  color: #ff4fd8 !important;
-  text-shadow: 0 0 6px rgba(255,79,216,0.9),
-               0 0 14px rgba(255,79,216,0.7);
-  font-weight: 800 !important;
-  position: relative;
-}
-
-/* neon underline */
-.navbar-nav .nav-item.active > .nav-link::after,
-.navbar-nav .nav-link.active::after,
-.navbar-nav .nav-item > .nav-link[aria-current="page"]::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0;
-  bottom: -8px;
-  height: 2px;
-  background: #ff4fd8;
-  box-shadow: 0 0 10px rgba(255,79,216,1);
-  border-radius: 2px;
-}
-
-
