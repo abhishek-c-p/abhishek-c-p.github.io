@@ -446,34 +446,41 @@ header .post-heading h1,
 
 
 /* ==========================================
-   FOOTER SOCIAL ICONS: neon magenta ring
-   (Beautiful Jekyll / FA stack)
-   ========================================== */
+   FOOTER SOCIAL ICONS: hollow neon ring
+========================================== */
 
-/* 1) Turn the filled circle into a hollow neon ring */
+/* Big circle = hollow ring ONLY */
 footer .footer-links .fa-circle.fa-stack-2x {
-  color: transparent !important;              /* removes the blue fill */
-  -webkit-text-stroke: 2px #ff4fd8;          /* ring thickness + neon magenta */
-  text-shadow: 0 0 8px rgba(255,79,216,0.9); /* glow */
+  color: transparent !important;               /* no fill */
+  -webkit-text-fill-color: transparent !important; /* Safari/Chrome fill off */
+  -webkit-text-stroke: 2px #ff4fd8;           /* ring thickness + neon */
+  
+  text-shadow: none !important;               /* stop inward glow fill */
+  filter: drop-shadow(0 0 6px rgba(255,79,216,0.9))
+          drop-shadow(0 0 12px rgba(255,79,216,0.7)); /* glow OUTSIDE */
+  opacity: 1 !important;
 }
 
-/* 2) Make the actual icons neon magenta */
+/* Actual icons = solid neon on top */
 footer .footer-links .fa-stack-1x,
 footer .footer-links .fa-inverse {
   color: #ff4fd8 !important;
-  text-shadow: 0 0 6px rgba(255,79,216,0.8);
+  opacity: 1 !important;
+  text-shadow: 0 0 6px rgba(255,79,216,0.9);
 }
 
-/* 3) Hover effect: brighter neon */
+/* Hover brighter */
 footer .footer-links a:hover .fa-circle.fa-stack-2x {
   -webkit-text-stroke: 2px #ff7fe5;
-  text-shadow: 0 0 10px rgba(255,127,229,1);
+  filter: drop-shadow(0 0 8px rgba(255,127,229,1))
+          drop-shadow(0 0 16px rgba(255,127,229,0.9));
 }
 footer .footer-links a:hover .fa-stack-1x,
 footer .footer-links a:hover .fa-inverse {
   color: #ff7fe5 !important;
-  text-shadow: 0 0 10px rgba(255,127,229,1);
+  text-shadow: 0 0 8px rgba(255,127,229,1);
 }
+
 
 /* ------------------------------------------
    OVERRIDE: footer social links = no pills
