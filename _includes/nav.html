@@ -15,26 +15,46 @@
 
   <div class="collapse navbar-collapse" id="main-navbar">
     <ul class="navbar-nav ml-auto">
+
+      {%- assign current_url = page.url | relative_url -%}
+
       {%- for link in site.navbar-links -%}
-        {%- if link[1].first %}
+
+        {%- if link[1].first -%}
+          <!-- Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown{{ forloop.index }}"
+               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{ link[0] }}
             </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown{{ forloop.index }}">
               {%- for childlink in link[1] -%}
-                {%- for linkparts in childlink %}
-                  <a class="dropdown-item" href="{{ linkparts[1] | relative_url }}">{{ linkparts[0] }}</a>
+                {%- for linkparts in childlink -%}
+                  <a class="dropdown-item" href="{{ linkparts[1] | relative_url }}">
+                    {{ linkparts[0] }}
+                  </a>
                 {%- endfor -%}
-              {%- endfor %}
+              {%- endfor -%}
             </div>
           </li>
-        {% else %}
-          <li class="nav-item {% if page.url == link[1] or page.permalink == link[1] %}active{% endif %}">
-            <a class="nav-link" href="{{ link[1] | relative_url }}">{{ link[0] }}</a>
+
+        {%- else -%}
+          <!-- Normal link with ACTIVE detection -->
+          {%- assign link_url = link[1] | relative_url -%}
+          {%- assign active_class = "" -%}
+          {%- if current_url == link_url or current_url contains link_url -%}
+            {%- assign active_class = "active" -%}
+          {%- endif -%}
+
+          <li class="nav-item {{ active_class }}">
+            <a class="nav-link {{ active_class }}"
+               href="{{ link_url }}"
+               {% if active_class == "active" %}aria-current="page"{% endif %}>
+              {{ link[0] }}
+            </a>
           </li>
         {%- endif -%}
+
       {%- endfor -%}
 
       {% if site.post_search %}
