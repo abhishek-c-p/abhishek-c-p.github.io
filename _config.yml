@@ -122,17 +122,18 @@ site-css:
 
 # Colour values can be any valid CSS colour
 
-navbar-col: "#0d1117"
-navbar-text-col: "#e6edf3"
-navbar-children-col: "#0d1117"
-page-col: "#0b0d10"
 
+navbar-col: "#0b1e33"        # dark blue tint
+navbar-text-col: "#e6edf3"
+navbar-children-col: "#0b1e33"
+
+footer-col: "#0b1e33"        # match navbar
+footer-text-col: "#c9d1d9"
+footer-link-col: "#e6edf3"
+
+page-col: "#0b0d10"
 link-col: "#7aa2ff"
 hover-col: "#a5bfff"
-
-footer-col: "#0d1117"
-footer-text-col: "#8b949e"
-footer-link-col: "#e6edf3"
 
 
 # Alternatively, the navbar, footer, and page background can be set to an image
