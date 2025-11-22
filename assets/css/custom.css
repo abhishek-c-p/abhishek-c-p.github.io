@@ -1,9 +1,16 @@
-/* ================================
-   GLOBAL DARK THEME + READABILITY
-================================ */
+/* =========================================================
+   CLEAN DARK THEME + YOUR COLOR SCHEME (RESTORED)
+   - Navbar light white-blue
+   - Active navbar neon magenta + underline glow
+   - Big page titles neon magenta + glow
+   - Body subheadings light blue
+   - Footer video preserved
+========================================================= */
+
+/* ---------- Base page colors ---------- */
 body, .page-content, .main-content {
   background: #0b0d10 !important;
-  color: #e6edf3 !important;
+  color: #e6edf3 !important;          /* readable near-white */
   line-height: 1.7;
   font-size: 1.05rem;
 }
@@ -12,7 +19,7 @@ p, li, .post-entry, .intro-text {
   color: #e6edf3 !important;
 }
 
-/* links */
+/* ---------- Links ---------- */
 a {
   color: #7aa2ff !important;
   text-decoration: none;
@@ -21,55 +28,62 @@ a:hover {
   color: #a5bfff !important;
 }
 
-/* ================================
-   HEADING COLORS (restore your scheme)
-================================ */
-
-/* BIG page header title (the huge one inside the header band) */
-.intro-header .page-heading h1,
-.intro-header .post-heading h1,
-header .page-heading h1,
-header .post-heading h1 {
-  color: #ff4fd8 !important;   /* neon magenta */
-  text-shadow: 0 0 10px rgba(255,79,216,0.45);
-  font-weight: 900;
-}
-
-/* H1 inside body (if any) */
-.page-content h1, .main-content h1 {
-  color: #ff4fd8 !important;   /* keep consistent */
+/* ---------- Headings in BODY ---------- */
+/* normal h1 inside body (rare) keep soft + readable */
+h1 {
+  color: #f0f6fc !important;
   font-weight: 800;
 }
 
-/* Section headings like “Superconductivity & Josephson junctions” */
+/* body section headings = light blue */
 h2, h3 {
-  color: #a9d6ff !important;   /* light blue */
-  font-weight: 800;
-}
-
-/* Smaller headings */
-h4, h5, h6 {
-  color: #ffb3b3 !important;   /* soft light red */
+  color: #cfe3ff !important;   /* light blue */
   font-weight: 700;
 }
 
-/* remove underline pseudo-elements */
+/* smaller headings */
+h4, h5, h6 {
+  color: #e6edf3 !important;
+  font-weight: 700;
+}
+
+/* remove any theme underline pseudo-elements */
 h2::after, h3::after {
   content: none !important;
   display: none !important;
 }
 
-/* Reduce huge home title slightly */
+/* ---------- BIG PAGE TITLES (HEADER) = NEON MAGENTA ---------- */
+.intro-header .page-heading h1,
+.intro-header .post-heading h1,
+header .page-heading h1,
+header .post-heading h1,
+.header-section h1 {
+  color: #ff4fd8 !important;     /* neon magenta */
+  text-shadow: 0 0 10px rgba(255,79,216,0.55),
+               0 0 18px rgba(255,79,216,0.35);
+  font-weight: 900;
+}
+
+/* reduce huge home title a bit (Hi, I'm Abhishek.) */
 .intro-header .page-heading h1,
 .intro-header .post-heading h1 {
   font-size: 3rem !important;
 }
 
-/* ================================
-   NAVBAR (transparent top, solid on scroll)
-================================ */
+/* ---------- NAVBAR: light white-blue text ---------- */
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+  color: #dbe7ff !important;     /* light white-blue */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.navbar-custom .nav-link:hover {
+  color: #ffffff !important;
+}
 
-/* At top of page -> transparent navbar so background shows */
+/* TOP of page => transparent navbar */
 .navbar-custom.top-nav-regular {
   background: transparent !important;
   backdrop-filter: none !important;
@@ -77,22 +91,16 @@ h2::after, h3::after {
   box-shadow: none !important;
 }
 
-/* After scroll -> solid tinted bar */
+/* After scroll => solid tinted blue */
 .navbar-custom.top-nav-short,
 .navbar-custom.top-nav-short-permanent {
-  background: rgba(15, 35, 60, 0.95) !important;  /* light blue tint */
+  background: rgba(15, 35, 60, 0.96) !important;  /* your soft blue tint */
   backdrop-filter: blur(6px) !important;
   border-bottom: none !important;
   box-shadow: none !important;
 }
 
-/* remove any divider line */
-.navbar-custom, .navbar {
-  border-bottom: none !important;
-  box-shadow: none !important;
-}
-
-/* ACTIVE NAV ITEM -> neon magenta */
+/* ---------- ACTIVE NAV ITEM = NEON MAGENTA + UNDERLINE ---------- */
 .navbar-nav .nav-item.active > .nav-link,
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-item > .nav-link[aria-current="page"] {
@@ -117,14 +125,19 @@ h2::after, h3::after {
   border-radius: 2px;
 }
 
-/* ================================
-   FOOTER VIDEO
-================================ */
+/* kill any divider line under navbar */
+.navbar-custom, .navbar {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* ---------- FOOTER VIDEO (site-wide) ---------- */
 .video-footer {
   position: relative;
   overflow: hidden;
   padding-top: 3rem;
   padding-bottom: 2rem;
+  margin-top: 3rem;
 }
 
 .video-footer .bg-video {
@@ -145,25 +158,24 @@ h2::after, h3::after {
 }
 
 /* footer content above video */
-.video-footer .beautiful-jekyll-footer {
+.video-footer .beautiful-jekyll-footer,
+.video-footer .beautiful-jekyll-footer * {
   position: relative;
   z-index: 2;
 }
 
-/* Quote */
+/* footer quote */
 .footer-quote {
   margin: 1.2rem 0 0.6rem;
   text-align: center;
   font-size: 0.95rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #c9d1d9;
+  color: #e6edf3;
   opacity: 0.9;
 }
 
-/* ================================
-   RESOURCES GRID CARDS
-================================ */
+/* ---------- Resources cards + contact block (keep your nice layout) ---------- */
 .resources-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -199,9 +211,6 @@ h2::after, h3::after {
   border-color: rgba(255,79,216,0.6);
 }
 
-/* ================================
-   RESOURCES CONTACT BLOCK
-================================ */
 .resources-contact-footer {
   margin-top: 3rem;
   padding: 2.5rem 1.5rem;
@@ -222,7 +231,7 @@ h2::after, h3::after {
   margin: 0 0 0.4rem 0;
   font-size: 1.9rem;
   letter-spacing: 1px;
-  color: #ff4fd8 !important; /* magenta */
+  color: #f6f0a6 !important;  /* soft yellow */
 }
 
 .rcf-sub {
@@ -267,6 +276,11 @@ h2::after, h3::after {
   box-shadow: 0 0 14px rgba(255,79,216,0.55);
 }
 
+.rcf-info {
+  color: #e6edf3;
+  font-size: 1rem;
+}
+
 .rcf-info h3 {
   margin-top: 0.25rem;
   color: #a9d6ff !important;
@@ -276,6 +290,7 @@ h2::after, h3::after {
 .rcf-info a {
   color: #e6edf3 !important;
 }
+
 .rcf-info a:hover {
   color: #a5bfff !important;
 }
@@ -292,15 +307,12 @@ h2::after, h3::after {
   opacity: 0.9;
   transition: color 0.2s ease, transform 0.1s ease;
 }
+
 .rcf-socials a:hover {
   color: #ff4fd8;
   transform: translateY(-2px);
 }
 
-/* Mobile */
 @media (max-width: 800px) {
   .rcf-wrap { grid-template-columns: 1fr; }
 }
-
-
-
