@@ -316,3 +316,118 @@ header .post-heading h1,
 @media (max-width: 800px) {
   .rcf-wrap { grid-template-columns: 1fr; }
 }
+
+
+/* =========================
+   HOME ABOUT LAYOUT
+========================= */
+.home-about {
+  max-width: 1100px;
+  margin: 2.5rem auto 1rem;
+  display: grid;
+  grid-template-columns: 0.9fr 1.6fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* LEFT */
+.home-about-left {
+  text-align: center;
+  padding: 1.5rem 1.2rem;
+  background: #11161c;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+}
+
+.home-avatar {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255,79,216,0.6); /* neon magenta ring */
+  box-shadow: 0 0 16px rgba(255,79,216,0.35);
+  margin-bottom: 1rem;
+}
+
+.home-name {
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: #ff4fd8; /* neon magenta */
+  margin-bottom: 0.35rem;
+}
+
+.home-role {
+  font-size: 1.05rem;
+  color: #a9d6ff; /* soft light blue */
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+.home-affil {
+  color: #e6edf3;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  margin-bottom: 1.1rem;
+}
+
+/* socials */
+.home-socials {
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  font-size: 1.9rem;
+  margin-top: 0.5rem;
+}
+.home-socials a {
+  color: #e6edf3;
+  opacity: 0.9;
+  transition: transform 0.12s ease, color 0.2s ease;
+}
+.home-socials a:hover {
+  color: #ff4fd8;
+  transform: translateY(-2px);
+}
+
+/* RIGHT */
+.home-about-right h2 {
+  color: #ffb3b3; /* your soft light red for section titles */
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-top: 0;
+}
+
+.home-about-right p {
+  color: #e6edf3;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* two columns inside right */
+.home-two-col {
+  margin-top: 1.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
+}
+.home-two-col h3 {
+  color: #a9d6ff;   /* light blue subheadings */
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+}
+.home-two-col ul {
+  padding-left: 1.1rem;
+}
+.home-two-col li {
+  margin: 0.35rem 0;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .home-about {
+    grid-template-columns: 1fr;
+  }
+  .home-two-col {
+    grid-template-columns: 1fr;
+  }
+}
