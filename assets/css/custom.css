@@ -35,3 +35,27 @@ h1, h2, h3, h4, h5, h6 {
   color: #c9d1d9 !important;
   font-size: 1.25rem !important;
 }
+
+/* ===== Add some color back ===== */
+
+/* Headings: soft light red (readable, not loud) */
+h1, h2, h3, h4, h5, h6,
+.page-title, .post-title {
+  color: #ffb3b3 !important;   /* very light red */
+}
+
+/* Optional: tiny accent underline for section headings */
+h2 {
+  position: relative;
+  padding-bottom: 6px;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  margin-top: 6px;
+  background: rgba(255, 179, 179, 0.6);  /* soft red line */
+  border-radius: 2px;
+}
+
