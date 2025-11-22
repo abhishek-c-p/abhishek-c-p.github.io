@@ -22,7 +22,7 @@ permalink: /resources/
     <div class="rcf-form">
       <h2>CONTACT ME!</h2>
       <p class="rcf-sub">
-        If you’d like to reach out for teaching, collaboration, or materials, send me a message here.
+        If you’d like to reach out to me,send in a message here.
       </p>
 
       <form action="https://formspree.io/f/xyzveolr" method="POST">
