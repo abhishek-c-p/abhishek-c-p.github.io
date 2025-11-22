@@ -1,8 +1,9 @@
 <footer class="video-footer">
 
-  <!-- Background video (replace the src if your file name is different) -->
+  <!-- Background video -->
   <video class="bg-video" autoplay muted loop playsinline>
-    <source src="{{ '/assets/video/footer.mp4' | relative_url }}" type="video/mp4">
+    <!-- CHANGE this path to your actual video file -->
+    <source src="/assets/video/aurora.mp4" type="video/mp4">
   </video>
   <div class="footer-overlay"></div>
 
@@ -12,6 +13,9 @@
 
         {% include social-networks-links.html %}
 
+        <!-- Quote -->
+        <div class="footer-quote">Memento mori</div>
+
         {% if page.footer-extra %}
           <div class="footer-custom-content">
             {% for file in page.footer-extra %}
@@ -20,15 +24,20 @@
           </div>
         {% endif %}
 
-        <!-- Quote -->
-        <p class="footer-quote">Memento mori</p>
-
         <p class="copyright text-muted">
           {% if site.author %}
             {{ site.author }}
             &nbsp;&bull;&nbsp;
           {% endif %}
           {{ site.time | date: '%Y' }}
+
+          {% if site.matomo %}
+            {% if site.matomo.opt-out %}
+              &nbsp;&bull;&nbsp;
+              <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut"
+                 target="_blank" class="text_muted">Do-not-Track</a>
+            {% endif %}
+          {% endif %}
 
           {% if site.edit_page_button and site.github.repository_url %}
             &nbsp;&bull;&nbsp;
@@ -39,10 +48,9 @@
         </p>
 
         {% unless site.remove-ads %}
-          <p class="theme-by text-muted">
-            Powered by
-            <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
-          </p>
+        <p class="theme-by text-muted">
+          Powered by <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+        </p>
         {% endunless %}
 
       </div>
