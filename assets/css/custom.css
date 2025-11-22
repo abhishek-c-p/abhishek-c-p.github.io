@@ -96,12 +96,12 @@ h1, .page-heading h1, .post-heading h1 {
 
 /* Section/sub headings: H2 + H3 */
 h2, h3 {
-  color: #47D1ED !important;   /* light blue */
+  color: 	#74ee15 !important;   /* light blue */
 }
 
 /* Optional: keep smaller headings a soft neutral */
 h4, h5, h6 {
-  color: #e6edf3 !important;
+  color: 	#4deeea !important;
 }
 
 /* Big header page title (the huge "Research", "Teaching", etc.) */
