@@ -111,3 +111,42 @@ header .page-heading h1,
 header .post-heading h1 {
   color: #ff4fd8 !important;   /* light yellow */
 }
+
+/* ===== VIDEO header/footer only ===== */
+.video-header, footer {
+  position: relative;
+  overflow: hidden;
+}
+
+/* video fills the header/footer */
+.bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+/* dark overlay for readability */
+.header-overlay, .footer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+/* keep text above video */
+.video-header .container-md,
+.video-header .page-heading,
+.video-header .post-heading,
+footer * {
+  position: relative;
+  z-index: 2;
+}
+
+/* body stays clean black */
+body, .page-content {
+  background: #0b0d10 !important;
+}
