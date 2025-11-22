@@ -1,6 +1,6 @@
 <footer class="video-footer">
   <!-- Background video -->
-  <video class="bg-video" autoplay muted loop playsinline>
+  <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="/assets/img/bgimage.png" aria-hidden="true">
     <source src="/assets/video/footer.mp4" type="video/mp4">
   </video>
   <div class="footer-overlay"></div>
@@ -15,16 +15,10 @@
         <div class="footer-quote">Memento mori</div>
 
         <p class="copyright text-muted">
-          {% if site.author %}
-            {{ site.author }}
-            &nbsp;&bull;&nbsp;
-          {% endif %}
-          {{ site.time | date: '%Y' }}
-
-          {% if site.edit_page_button and site.github.repository_url %}
-            &nbsp;&bull;&nbsp;
-            <a title="Edit this page on GitHub"
-               href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}"
+          © {{ site.time | date: "%Y" }} {{ site.author }}
+          {% if site.edit_page_button %}
+            &nbsp;•&nbsp;
+            <a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}"
                class="text_muted">Edit page</a>
           {% endif %}
         </p>
