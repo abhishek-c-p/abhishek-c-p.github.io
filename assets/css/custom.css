@@ -59,3 +59,26 @@ h2::after {
   border-radius: 2px;
 }
 
+/* ===== Neon magenta active navbar item ===== */
+.navbar-nav .nav-item.active > .nav-link {
+  color: #ff4fd8 !important;                 /* neon magenta */
+  text-shadow: 0 0 6px rgba(255, 79, 216, 0.8),
+               0 0 12px rgba(255, 79, 216, 0.6);
+  font-weight: 800;
+  position: relative;
+}
+
+/* optional neon underline */
+.navbar-nav .nav-item.active > .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: #ff4fd8;
+  box-shadow: 0 0 8px rgba(255, 79, 216, 0.9);
+  border-radius: 2px;
+}
+
+
