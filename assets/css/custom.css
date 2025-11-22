@@ -554,3 +554,26 @@ footer .fa-stack-2x {
     background: rgba(0,0,0,0.65);
   }
 }
+/* Google Scholar button on Publications page */
+.scholar-btn-wrap {
+  text-align: center;
+  margin: 1.2rem 0 2rem;
+}
+.scholar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: #0b0d10 !important;
+  background: #ff4fd8 !important;
+  box-shadow: 0 0 14px rgba(255,79,216,0.6);
+  text-decoration: none !important;
+}
+.scholar-btn:hover {
+  background: #ff7fe5 !important;
+  box-shadow: 0 0 18px rgba(255,127,229,0.9);
+  transform: translateY(-1px);
+}
