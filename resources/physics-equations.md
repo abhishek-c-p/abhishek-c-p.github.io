@@ -25,7 +25,7 @@ Each equation includes a quick guide to symbols.
 - \(k_B = 1.38\times 10^{-23}\, \mathrm{J/K}\)
 - \(R = 8.31\, \mathrm{J/(mol\,K)}\)
 - \(e = 1.602\times 10^{-19}\, \mathrm{C}\)
-- \(k_c = 8.99\times 10^{9}\, \mathrm{N\,m^2/C^2}\)
+- \(k_c = 8.99\times 10^{9}\, \mathrm{N\,m^2/C^2}\) :contentReference[oaicite:0]{index=0}
 
 ---
 
@@ -34,19 +34,19 @@ Each equation includes a quick guide to symbols.
 Right triangle:
 \[
 \text{hyp}^2 = \text{opp}^2 + \text{adj}^2
-\]
+\] :contentReference[oaicite:1]{index=1}
 
 \[
 \sin\theta = \frac{\text{opp}}{\text{hyp}},\quad
 \cos\theta = \frac{\text{adj}}{\text{hyp}},\quad
 \tan\theta = \frac{\text{opp}}{\text{adj}}
-\]
+\] :contentReference[oaicite:2]{index=2}
 
 **Symbols**
 - \(\theta\): angle  
-- hyp/opp/adj: hypotenuse / opposite side / adjacent side  
+- hyp/opp/adj: hypotenuse / opposite / adjacent  
 
-Vector components (2D):
+Vector components:
 \[
 \vec A = A_x \hat{i} + A_y \hat{j},\qquad
 A_x = A\cos\theta,\quad A_y = A\sin\theta
@@ -56,46 +56,30 @@ A_x = A\cos\theta,\quad A_y = A\sin\theta
 - \(\vec A\): vector  
 - \(A\): magnitude  
 - \(A_x, A_y\): components  
-- \(\hat i,\hat j\): unit vectors  
 
 ---
 
 ## Unit 2 – Motion (Kinematics)
 
-Position vector:
+Position:
 \[
 \vec r = x\,\hat i + y\,\hat j
 \]
-
-**Symbols**
-- \(\vec r\): position (m)  
-- \(x,y\): coordinates (m)
 
 Displacement:
 \[
 \Delta\vec r = \vec r_f - \vec r_i
 \]
 
-**Symbols**
-- \(\Delta\vec r\): displacement (m)  
-- \(\vec r_i,\vec r_f\): initial/final position  
-
 Average velocity:
 \[
 \vec v_{\text{avg}} = \frac{\Delta\vec r}{\Delta t}
 \]
 
-**Symbols**
-- \(\vec v_{\text{avg}}\): average velocity (m/s)  
-- \(\Delta t\): time interval (s)
-
 Average acceleration:
 \[
 \vec a_{\text{avg}} = \frac{\Delta\vec v}{\Delta t}
-\]
-
-**Symbols**
-- \(\vec a_{\text{avg}}\): average acceleration (m/s\(^2\))
+\] :contentReference[oaicite:3]{index=3}
 
 Constant-acceleration relations:
 \[
@@ -109,9 +93,10 @@ v_f^2 = v_i^2 + 2a\Delta x
 \]
 
 **Symbols**
-- \(v_i,v_f\): initial/final velocity (m/s)  
-- \(a\): constant acceleration (m/s\(^2\))  
-- \(\Delta x\): displacement (m)
+- \(v_i,v_f\): initial/final velocity  
+- \(a\): acceleration  
+- \(\Delta x\): displacement  
+- \(\Delta t\): time interval  
 
 ---
 
@@ -145,12 +130,12 @@ f_s\le \mu_s N,\qquad f_k=\mu_k N
 Impulse:
 \[
 \vec I = \vec F\,\Delta t = m\Delta\vec v
-\]
+\] :contentReference[oaicite:4]{index=4}
 
 **Symbols**
-- \(m\): mass (kg)  
-- \(N\): normal force (N)  
-- \(k\): spring constant (N/m)  
+- \(m\): mass  
+- \(N\): normal force  
+- \(k\): spring constant  
 - \(\mu_s,\mu_k\): friction coefficients  
 
 ---
@@ -193,9 +178,11 @@ P+\frac12\rho v^2+\rho g y = \text{constant}
 \]
 
 **Symbols**
-- \(\rho\): density (kg/m\(^3\))  
-- \(\mu\): viscosity (Pa·s)  
-- \(Q\): flow rate (m\(^3\)/s)
+- \(\rho\): density  
+- \(Q\): flow rate  
+- \(\mu\): viscosity  
+- \(R\): tube radius  
+- \(L\): tube length  
 
 ---
 
@@ -248,36 +235,40 @@ PV = Nk_BT = nRT
 First law:
 \[
 \Delta U = W + Q
-\]
+\] :contentReference[oaicite:5]{index=5}
 
 ---
 
-## Unit 7 – Electricity & Magnetism
+# Unit 7 – Electricity & Magnetism
 
-### Coulomb’s law
+## Coulomb’s law
 \[
 F_e = k_c\frac{|q_1q_2|}{r^2}
 \]
 
 **Symbols**
-- \(F_e\): electric force (N)  
+- \(F_e\): electric force  
 - \(k_c\): Coulomb constant  
-- \(q_1,q_2\): charges (C)  
-- \(r\): separation (m)
+- \(q_1,q_2\): charges  
+- \(r\): separation  
 
-### Electric field
+---
+
+## Electric field
 \[
 E = k_c\frac{|q|}{r^2}
-\]
-\[
+\qquad
 \vec F = q\vec E
 \]
 
 **Symbols**
-- \(E\): electric field (N/C)  
-- \(q\): charge (C)
+- \(E\): electric field  
+- \(q\): charge  
+- \(\vec F\): force on charge  
 
-### Electric potential & energy
+---
+
+## Electric potential & energy
 \[
 V = k_c\frac{q}{r}
 \]
@@ -288,56 +279,82 @@ U_e = k_c\frac{q_1q_2}{r}
 \Delta U = q\Delta V
 \]
 
-### Capacitance
+---
+
+## Capacitance
 \[
 C=\frac{Q}{V}
-\]
-\[
+\qquad
 C=\varepsilon_0\frac{A}{d}
-\]
-\[
+\qquad
 U=\frac12 CV^2
 \]
 
-### Current & Ohm’s law
+**Symbols**
+- \(C\): capacitance  
+- \(Q\): charge stored  
+- \(V\): potential difference  
+- \(\varepsilon_0\): permittivity of free space  
+- \(A\): plate area  
+- \(d\): plate separation  
+- \(U\): energy stored  
+
+---
+
+## Current & Ohm’s law
 \[
 I=\frac{\Delta Q}{\Delta t}
-\]
-\[
+\qquad
 V=IR
-\]
-\[
+\qquad
 P=IV=I^2R=\frac{V^2}{R}
 \]
 
-Series/parallel:
+Series:
 \[
 R_{\text{eq}} = R_1+R_2+\cdots
 \]
+
+Parallel:
 \[
 \frac1{R_{\text{eq}}}=\frac1{R_1}+\frac1{R_2}+\cdots
 \]
 
-### Magnetic force
+---
+
+## Magnetic force
 \[
-F_B = qvB\sin\theta
-\]
-\[
-F = ILB\sin\theta
+F_B=qvB\sin\theta
+\qquad
+F=ILB\sin\theta
 \]
 
-### Magnetic field from currents
+---
+
+## Magnetic field from currents
+
+Long straight wire:
 \[
 B=\frac{\mu_0 I}{2\pi r}
 \]
+
+Solenoid:
 \[
 B=\mu_0 nI
 \]
 
-### Magnetic flux & induction
+---
+
+## Magnetic flux & induction
 \[
 \Phi_B = BA\cos\theta
 \]
 \[
 \varepsilon = -\frac{d\Phi_B}{dt}
 \]
+
+**Symbols**
+- \(\Phi_B\): magnetic flux  
+- \(\varepsilon\): induced emf  
+- \(\mu_0\): permeability of free space  
+- \(n\): turns per length  
