@@ -5,17 +5,12 @@ permalink: /resources/physics-equations/
 mathjax: true
 ---
 
-<!-- MathJax config: allow $...$ inline and $$...$$ display
-     + color macros for equations and symbols -->
+<!-- MathJax config: allow $...$ inline and $$...$$ display -->
 <script>
   window.MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']],
-      macros: {
-        eq: ["{\\color{#ff4fd8}{#1}}", 1],   // neon magenta
-        sym: ["{\\color{#7CFC00}{#1}}", 1]  // neon green
-      }
+      displayMath: [['$$','$$'], ['\\[','\\]']]
     }
   };
 </script>
@@ -26,6 +21,20 @@ mathjax: true
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 
+<!-- Colors: equations = neon magenta, symbols = green -->
+<style>
+/* All math glyphs (inline + display) */
+mjx-container[jax="CHTML"] mjx-math {
+  color: #ff4fd8;  /* neon magenta */
+}
+
+/* Symbol labels in the “Symbols” lists */
+.sym-green {
+  color: #7CFC00;   /* bright green */
+  font-weight: 600;
+}
+</style>
+
 # Physics Equations (PHY 2130 / 2140)
 
 Below is a compact equation sheet for Physics 1 students.  
@@ -35,16 +44,16 @@ Each equation includes a quick guide to symbols.
 
 ## Constants
 
-- $\eq{\sym{G} = 6.67\times 10^{-11}\, \mathrm{N\,m^2/kg^2}}$
-- $\eq{\sym{M}_{\oplus} = 5.97\times 10^{24}\, \mathrm{kg}}$
-- $\eq{\sym{R}_{\oplus} = 6.38\times 10^{6}\, \mathrm{m}}$
-- $\eq{\sym{g} = 9.8\, \mathrm{N/kg} = 9.8\, \mathrm{m/s^2}}$
-- $\eq{\sym{k}_B = 1.38\times 10^{-23}\, \mathrm{J/K}}$
-- $\eq{\sym{R} = 8.31\, \mathrm{J/(mol\,K)}}$
-- $\eq{\sym{e} = 1.602\times 10^{-19}\, \mathrm{C}}$
-- $\eq{\sym{k}_c = 8.99\times 10^{9}\, \mathrm{N\,m^2/C^2}}$
-- $\eq{\sym{\varepsilon}_0 = 8.85\times 10^{-12}\, \mathrm{C^2/(N\,m^2)}}$
-- $\eq{\sym{\mu}_0 = 4\pi\times 10^{-7}\, \mathrm{T\,m/A}}$
+- $G = 6.67\times 10^{-11}\, \mathrm{N\,m^2/kg^2}$
+- $M_{\oplus} = 5.97\times 10^{24}\, \mathrm{kg}$
+- $R_{\oplus} = 6.38\times 10^{6}\, \mathrm{m}$
+- $g = 9.8\, \mathrm{N/kg} = 9.8\, \mathrm{m/s^2}$
+- $k_B = 1.38\times 10^{-23}\, \mathrm{J/K}$
+- $R = 8.31\, \mathrm{J/(mol\,K)}$
+- $e = 1.602\times 10^{-19}\, \mathrm{C}$
+- $k_c = 8.99\times 10^{9}\, \mathrm{N\,m^2/C^2}$
+- $\varepsilon_0 = 8.85\times 10^{-12}\, \mathrm{C^2/(N\,m^2)}$
+- $\mu_0 = 4\pi\times 10^{-7}\, \mathrm{T\,m/A}$
 
 ---
 
@@ -52,34 +61,31 @@ Each equation includes a quick guide to symbols.
 
 Right triangle:
 $$
-\eq{\text{hyp}^2 = \text{opp}^2 + \text{adj}^2}
+\text{hyp}^2 = \text{opp}^2 + \text{adj}^2
 $$
 
 Trig:
 $$
-\eq{\sin\sym{\theta} = \frac{\text{opp}}{\text{hyp}},\qquad
-\cos\sym{\theta} = \frac{\text{adj}}{\text{hyp}},\qquad
-\tan\sym{\theta} = \frac{\text{opp}}{\text{adj}}}
+\sin\theta = \frac{\text{opp}}{\text{hyp}},\qquad
+\cos\theta = \frac{\text{adj}}{\text{hyp}},\qquad
+\tan\theta = \frac{\text{opp}}{\text{adj}}
 $$
-
-**Symbols**
-- $\sym{\theta}$: angle  
-- hyp/opp/adj: hypotenuse / opposite / adjacent  
 
 Vector components:
 $$
-\eq{\vec{\sym{A}} = \sym{A}_x \hat i + \sym{A}_y \hat j}
+\vec A = A_x \hat i + A_y \hat j
 $$
 
 $$
-\eq{\sym{A}_x = \sym{A}\cos\sym{\theta},\qquad \sym{A}_y = \sym{A}\sin\sym{\theta}}
+A_x = A\cos\theta,\qquad A_y = A\sin\theta
 $$
 
 **Symbols**
-- $\vec{\sym{A}}$: vector  
-- $\sym{A}$: magnitude  
-- $\sym{A}_x, \sym{A}_y$: components  
-- $\hat i,\hat j$: unit vectors  
+
+- <span class="sym-green">$\theta$</span>: angle  
+- hyp/opp/adj: hypotenuse / opposite / adjacent  
+- <span class="sym-green">$A$</span>: magnitude of vector  
+- <span class="sym-green">$A_x, A_y$</span>: components  
 
 ---
 
@@ -87,49 +93,49 @@ $$
 
 Position:
 $$
-\eq{\vec{\sym{r}} = \sym{x}\,\hat i + \sym{y}\,\hat j}
+\vec r = x\,\hat i + y\,\hat j
 $$
 
 Displacement:
 $$
-\eq{\Delta\vec{\sym{r}} = \vec{\sym{r}}_f - \vec{\sym{r}}_i}
+\Delta\vec r = \vec r_f - \vec r_i
 $$
 
 Average speed:
 $$
-\eq{\sym{v}_{\text{avg}} = \frac{\text{distance}}{\Delta \sym{t}}}
+v_{\text{avg}} = \frac{\text{distance}}{\Delta t}
 $$
 
 Average velocity:
 $$
-\eq{\vec{\sym{v}}_{\text{avg}} = \frac{\Delta\vec{\sym{r}}}{\Delta \sym{t}}}
+\vec v_{\text{avg}} = \frac{\Delta\vec r}{\Delta t}
 $$
 
 Average acceleration:
 $$
-\eq{\vec{\sym{a}}_{\text{avg}} = \frac{\Delta\vec{\sym{v}}}{\Delta \sym{t}}}
+\vec a_{\text{avg}} = \frac{\Delta\vec v}{\Delta t}
 $$
 
 Constant-acceleration relations:
 $$
-\eq{\sym{v}_f = \sym{v}_i + \sym{a}\sym{t}}
+v_f = v_i + a t
 $$
 
 $$
-\eq{\Delta \sym{x} = \sym{v}_i\sym{t} + \frac12 \sym{a}\sym{t}^2}
+\Delta x = v_i t + \frac12 a t^2
 $$
 
 $$
-\eq{\sym{v}_f^2 = \sym{v}_i^2 + 2\sym{a}\Delta \sym{x}}
+v_f^2 = v_i^2 + 2a\Delta x
 $$
 
 **Symbols**
-- $\sym{x},\sym{y}$: position coordinates (m)  
-- $\vec{\sym{r}}_i,\vec{\sym{r}}_f$: initial/final position  
-- $\sym{v}_i,\sym{v}_f$: initial/final velocity (m/s)  
-- $\sym{a}$: acceleration (m/s$^2$)  
-- $\sym{t},\Delta \sym{t}$: time (s)  
-- $\Delta \sym{x}$: displacement (m)
+
+- <span class="sym-green">$x,y$</span>: position coordinates (m)  
+- <span class="sym-green">$v_i, v_f$</span>: initial/final velocity (m/s)  
+- <span class="sym-green">$a$</span>: acceleration (m/s$^2$)  
+- <span class="sym-green">$t, \Delta t$</span>: time (s)  
+- <span class="sym-green">$\Delta x$</span>: displacement (m)  
 
 ---
 
@@ -137,51 +143,52 @@ $$
 
 Net force:
 $$
-\eq{\vec{\sym{F}}_{\text{net}}=\sum \vec{\sym{F}}}
+\vec F_{\text{net}}=\sum \vec F
 $$
 
 Newton’s 2nd law:
 $$
-\eq{\vec{\sym{F}}_{\text{net}}=\sym{m}\vec{\sym{a}}}
+\vec F_{\text{net}}=m\vec a
 $$
 
 Weight:
 $$
-\eq{\sym{W} = \sym{m}\sym{g}}
+W = mg
 $$
 
 Hooke’s law:
 $$
-\eq{\sym{F}_s = \sym{k}\Delta \sym{x}}
+F_s = k\Delta x
 $$
 
 Friction:
 $$
-\eq{\sym{f}_s \le \sym{\mu}_s \sym{N},\qquad \sym{f}_k=\sym{\mu}_k \sym{N}}
+f_s \le \mu_s N,\qquad f_k=\mu_k N
 $$
 
 Impulse:
 $$
-\eq{\vec{\sym{I}} = \vec{\sym{F}}\,\Delta \sym{t} = \sym{m}\Delta\vec{\sym{v}}}
+\vec I = \vec F\,\Delta t = m\Delta\vec v
 $$
 
-Momentum (added):
+Momentum:
 $$
-\eq{\vec{\sym{p}} = \sym{m}\vec{\sym{v}}}
+\vec p = m\vec v
 $$
 
-Conservation of momentum:
+Conservation:
 $$
-\eq{\vec{\sym{p}}_{\text{before}}=\vec{\sym{p}}_{\text{after}}}
+\vec p_{\text{before}} = \vec p_{\text{after}}
 $$
 
 **Symbols**
-- $\sym{m}$: mass (kg)  
-- $\sym{N}$: normal force (N)  
-- $\sym{k}$: spring constant (N/m)  
-- $\sym{\mu}_s,\sym{\mu}_k$: static/kinetic friction coefficients  
-- $\vec{\sym{I}}$: impulse (N·s)  
-- $\vec{\sym{p}}$: momentum (kg·m/s)
+
+- <span class="sym-green">$m$</span>: mass (kg)  
+- <span class="sym-green">$N$</span>: normal force (N)  
+- <span class="sym-green">$k$</span>: spring constant (N/m)  
+- <span class="sym-green">$\mu_s,\mu_k$</span>: static/kinetic friction coefficients  
+- <span class="sym-green">$\vec I$</span>: impulse (N·s)  
+- <span class="sym-green">$\vec p$</span>: momentum (kg·m/s)  
 
 ---
 
@@ -189,74 +196,70 @@ $$
 
 Density:
 $$
-\eq{\sym{\rho} = \frac{\sym{m}}{\sym{V}}}
+\rho = \frac{m}{V}
 $$
 
 Pressure:
 $$
-\eq{\sym{P}=\frac{\sym{F}}{\sym{A}}}
+P = \frac{F}{A}
 $$
 
 Hydrostatic pressure:
 $$
-\eq{\sym{P} = \sym{P}_0 + \sym{\rho}\sym{g}\sym{d}}
+P = P_0 + \rho g d
 $$
 
 Buoyant force:
 $$
-\eq{\sym{F}_B = \sym{\rho}_f \sym{V}_f \sym{g}}
+F_B = \rho_f V_f g
 $$
 
 Surface tension pressure:
 $$
-\eq{\Delta \sym{P} = \frac{2\sym{\gamma}}{\sym{r}}}
+\Delta P = \frac{2\gamma}{r}
 $$
 
 Continuity:
 $$
-\eq{\sym{Q} = \sym{A}\sym{v} = \text{constant}}
+Q = A v = \text{constant}
 $$
 
 Poiseuille’s law:
 $$
-\eq{\sym{Q} = \frac{\pi \sym{R}^4}{8\sym{\mu}\sym{L}}\Delta \sym{P}}
+Q = \frac{\pi R^4}{8\mu L}\Delta P
 $$
 
 Bernoulli:
 $$
-\eq{\sym{P}+\frac12\sym{\rho}\sym{v}^2+\sym{\rho}\sym{g}\sym{y} = \text{constant}}
+P + \frac12\rho v^2 + \rho g y = \text{constant}
 $$
 
-**NEW: Viscous drag (Stokes)**
+**Viscous drag (Stokes)**
 $$
-\eq{\sym{F}_{\text{viscous}} = 6\pi \sym{\mu}\sym{R}\sym{v}}
-$$
-
-**NEW: Terminal velocity in viscous fluid**
-$$
-\eq{\sym{v}_t = \frac{2\sym{R}^2(\sym{\rho}_s-\sym{\rho}_f)\sym{g}}{9\sym{\mu}}}
+F_{\text{viscous}} = 6\pi \mu R v
 $$
 
-**NEW: Reynolds number**
+**Terminal velocity in viscous fluid**
 $$
-\eq{\mathrm{Re}=\frac{\sym{\rho}\,\sym{R}\,\sym{v}}{\sym{\mu}}}
+v_t = \frac{2R^2(\rho_s-\rho_f)g}{9\mu}
+$$
+
+**Reynolds number**
+$$
+\mathrm{Re} = \frac{\rho R v}{\mu}
 $$
 
 **Symbols**
-- $\sym{\rho}$: density (kg/m$^3$)  
-- $\sym{P}$: pressure (Pa)  
-- $\sym{P}_0$: surface pressure  
-- $\sym{d}$: depth (m)  
-- $\sym{F}_B$: buoyant force (N)  
-- $\sym{\rho}_f$: fluid density  
-- $\sym{V}_f$: displaced volume  
-- $\sym{\gamma}$: surface tension  
-- $\sym{Q}$: flow rate (m$^3$/s)  
-- $\sym{R}$: sphere/tube radius  
-- $\sym{L}$: tube length  
-- $\sym{\mu}$: viscosity (Pa·s)  
-- $\sym{v}_t$: terminal velocity  
-- $\sym{\rho}_s$: sphere density  
+
+- <span class="sym-green">$\rho$</span>: density (kg/m$^3$)  
+- <span class="sym-green">$P$</span>: pressure (Pa)  
+- <span class="sym-green">$P_0$</span>: surface pressure (Pa)  
+- <span class="sym-green">$F_B$</span>: buoyant force (N)  
+- <span class="sym-green">$Q$</span>: flow rate (m$^3$/s)  
+- <span class="sym-green">$R$</span>: sphere / tube radius (m)  
+- <span class="sym-green">$L$</span>: tube length (m)  
+- <span class="sym-green">$\mu$</span>: viscosity (Pa·s)  
+- <span class="sym-green">$v_t$</span>: terminal velocity (m/s)  
 
 ---
 
@@ -264,39 +267,40 @@ $$
 
 Work:
 $$
-\eq{\sym{W} = \sym{F}_{\parallel} \sym{d}}
+W = F_{\parallel} d
 $$
 
 Kinetic energy:
 $$
-\eq{\sym{K} = \frac12 \sym{m}\sym{v}^2}
+K = \frac12 m v^2
 $$
 
 Gravitational potential energy:
 $$
-\eq{\sym{U}_g = \sym{m}\sym{g}\sym{y}}
+U_g = m g y
 $$
 
 Spring potential energy:
 $$
-\eq{\sym{U}_s=\frac12 \sym{k}(\Delta \sym{x})^2}
+U_s = \frac12 k(\Delta x)^2
 $$
 
 Total mechanical energy:
 $$
-\eq{\sym{E}_{\text{tot}} = \sym{K} + \sym{U} + \sym{E}_{\text{th}} + \dots}
+E_{\text{tot}} = K + U + E_{\text{th}} + \dots
 $$
 
 Power:
 $$
-\eq{\sym{P}=\frac{\Delta \sym{E}}{\Delta \sym{t}}}
+P = \frac{\Delta E}{\Delta t}
 $$
 
 **Symbols**
-- $\sym{W}$: work (J)  
-- $\sym{K}$: kinetic energy (J)  
-- $\sym{U}_g,\sym{U}_s$: potential energies (J)  
-- $\sym{P}$: power (W)
+
+- <span class="sym-green">$W$</span>: work (J)  
+- <span class="sym-green">$K$</span>: kinetic energy (J)  
+- <span class="sym-green">$U_g, U_s$</span>: potential energies (J)  
+- <span class="sym-green">$P$</span>: power (W)  
 
 ---
 
@@ -304,146 +308,155 @@ $$
 
 Temperature conversion:
 $$
-\eq{\sym{T}(\mathrm{K})=\sym{T}(^{\circ}\mathrm{C})+273.15}
+T(K) = T(^{\circ}C) + 273.15
 $$
 
 Heat:
 $$
-\eq{\sym{Q}=\sym{m}\sym{c}\Delta \sym{T}}
+Q = m c \Delta T
 $$
 
 Ideal gas law:
 $$
-\eq{\sym{P}\sym{V} = \sym{N}\sym{k}_B\sym{T} = \sym{n}\sym{R}\sym{T}}
+P V = N k_B T = n R T
 $$
 
 Average kinetic energy (ideal gas):
 $$
-\eq{\sym{K}_{\text{avg}}=\frac32 \sym{k}_B \sym{T}}
+K_{\text{avg}} = \frac32 k_B T
 $$
 
 RMS speed:
 $$
-\eq{\sym{v}_{\text{rms}}=\sqrt{\frac{3\sym{k}_B\sym{T}}{\sym{m}}}}
+v_{\text{rms}} = \sqrt{\frac{3k_B T}{m}}
 $$
 
 First law:
 $$
-\eq{\Delta \sym{U} = \sym{W} + \sym{Q}}
+\Delta U = W + Q
 $$
 
 **Symbols**
-- $\sym{Q}$: heat (J)  
-- $\sym{c}$: specific heat (J/kg·K)  
-- $\sym{n}$: moles  
-- $\sym{N}$: number of molecules  
-- $\sym{U}$: internal energy (J)
+
+- <span class="sym-green">$Q$</span>: heat (J)  
+- <span class="sym-green">$c$</span>: specific heat (J/kg·K)  
+- <span class="sym-green">$n$</span>: moles  
+- <span class="sym-green">$N$</span>: number of molecules  
+- <span class="sym-green">$U$</span>: internal energy (J)  
 
 ---
 
 # Unit 7 – Electricity & Magnetism
 
 ## Coulomb’s Law
+
 $$
-\eq{\sym{F}_e = \sym{k}_c\frac{|\sym{q}_1 \sym{q}_2|}{\sym{r}^2}}
+F_e = k_c\frac{|q_1 q_2|}{r^2}
 $$
 
 **Symbols**
-- $\sym{F}_e$: electric force (N)  
-- $\sym{k}_c$: Coulomb constant  
-- $\sym{q}_1,\sym{q}_2$: charges (C)  
-- $\sym{r}$: separation (m)
+
+- <span class="sym-green">$F_e$</span>: electric force (N)  
+- <span class="sym-green">$k_c$</span>: Coulomb constant  
+- <span class="sym-green">$q_1, q_2$</span>: charges (C)  
+- <span class="sym-green">$r$</span>: separation (m)  
 
 ---
 
 ## Electric Field
+
 $$
-\eq{\sym{E} = \sym{k}_c\frac{|\sym{q}|}{\sym{r}^2}}
+E = k_c\frac{|q|}{r^2}
 $$
 
 $$
-\eq{\vec{\sym{F}} = \sym{q}\vec{\sym{E}}}
+\vec F = q \vec E
 $$
 
 **Symbols**
-- $\sym{E}$: electric field (N/C or V/m)  
-- $\sym{q}$: charge (C)  
-- $\vec{\sym{F}}$: force on charge (N)
+
+- <span class="sym-green">$E$</span>: electric field (N/C or V/m)  
+- <span class="sym-green">$q$</span>: charge (C)  
+- <span class="sym-green">$\vec F$</span>: force (N)  
 
 ---
 
 ## Electric Potential & Energy
+
 $$
-\eq{\sym{V} = \sym{k}_c\frac{\sym{q}}{\sym{r}}}
+V = k_c\frac{q}{r}
 $$
 
 $$
-\eq{\sym{U}_e = \sym{k}_c\frac{\sym{q}_1 \sym{q}_2}{\sym{r}}}
+U_e = k_c\frac{q_1 q_2}{r}
 $$
 
 $$
-\eq{\Delta \sym{U} = \sym{q}\Delta \sym{V}}
+\Delta U = q\,\Delta V
 $$
 
 **Symbols**
-- $\sym{V}$: electric potential (V)  
-- $\sym{U}_e$: electric potential energy (J)  
-- $\Delta \sym{V}$: potential difference
+
+- <span class="sym-green">$V$</span>: electric potential (V)  
+- <span class="sym-green">$U_e$</span>: electric potential energy (J)  
+- <span class="sym-green">$\Delta V$</span>: potential difference (V)  
 
 ---
 
 ## Capacitance
+
 $$
-\eq{\sym{C}=\frac{\sym{Q}}{\sym{V}}}
+C = \frac{Q}{V}
 $$
 
 $$
-\eq{\sym{C}=\sym{\varepsilon}_0\frac{\sym{A}}{\sym{d}}}
+C = \varepsilon_0\frac{A}{d}
 $$
 
 $$
-\eq{\sym{U}=\frac12 \sym{C}\sym{V}^2=\frac12 \sym{Q}\sym{V}=\frac{\sym{Q}^2}{2\sym{C}}}
+U = \frac12 C V^2 = \frac12 QV = \frac{Q^2}{2C}
 $$
 
 **Symbols**
-- $\sym{C}$: capacitance (F)  
-- $\sym{Q}$: charge stored (C)  
-- $\sym{V}$: voltage (V)  
-- $\sym{\varepsilon}_0$: permittivity of free space  
-- $\sym{A}$: plate area (m$^2$)  
-- $\sym{d}$: separation (m)  
-- $\sym{U}$: stored energy (J)
+
+- <span class="sym-green">$C$</span>: capacitance (F)  
+- <span class="sym-green">$Q$</span>: charge (C)  
+- <span class="sym-green">$V$</span>: voltage (V)  
+- <span class="sym-green">$A$</span>: plate area (m$^2$)  
+- <span class="sym-green">$d$</span>: separation (m)  
 
 ---
 
 ## Current & Ohm’s Law
+
 $$
-\eq{\sym{I}=\frac{\Delta \sym{Q}}{\Delta \sym{t}}}
+I = \frac{\Delta Q}{\Delta t}
 $$
 
 $$
-\eq{\sym{V} = \sym{I}\sym{R}}
+V = IR
 $$
 
 Power:
 $$
-\eq{\sym{P} = \sym{I}\sym{V} = \sym{I}^2\sym{R} = \frac{\sym{V}^2}{\sym{R}}}
+P = IV = I^2 R = \frac{V^2}{R}
 $$
 
 Resistors in series:
 $$
-\eq{\sym{R}_{\text{eq}}=\sym{R}_1+\sym{R}_2+\cdots}
+R_{\text{eq}} = R_1 + R_2 + \cdots
 $$
 
 Resistors in parallel:
 $$
-\eq{\frac1{\sym{R}_{\text{eq}}}=\frac1{\sym{R}_1}+\frac1{\sym{R}_2}+\cdots}
+\frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots
 $$
 
 **Symbols**
-- $\sym{I}$: current (A)  
-- $\sym{R}$: resistance (Ω)  
-- $\sym{P}$: power (W)
+
+- <span class="sym-green">$I$</span>: current (A)  
+- <span class="sym-green">$R$</span>: resistance (Ω)  
+- <span class="sym-green">$P$</span>: power (W)  
 
 ---
 
@@ -451,17 +464,19 @@ $$
 
 Moving charge:
 $$
-\eq{\sym{F}_B=\sym{q}\sym{v}\sym{B}\sin\sym{\theta}}
+F_B = q v B \sin\theta
 $$
 
 Current-carrying wire:
 $$
-\eq{\sym{F}=\sym{I}\sym{L}\sym{B}\sin\sym{\theta}}
+F = I L B \sin\theta
 $$
 
 **Symbols**
-- $\sym{B}$: magnetic field (T)  
-- $\sym{\theta}$: angle between motion/current and $B$
+
+- <span class="sym-green">$B$</span>: magnetic field (T)  
+- <span class="sym-green">$L$</span>: length of wire (m)  
+- <span class="sym-green">$\theta$</span>: angle between current/velocity and $B$  
 
 ---
 
@@ -469,82 +484,79 @@ $$
 
 Long straight wire:
 $$
-\eq{\sym{B}=\frac{\sym{\mu}_0 \sym{I}}{2\pi \sym{r}}}
+B = \frac{\mu_0 I}{2\pi r}
 $$
 
 Solenoid:
 $$
-\eq{\sym{B}=\sym{\mu}_0 \sym{n}\sym{I}}
+B = \mu_0 n I
 $$
 
 **Symbols**
-- $\sym{\mu}_0$: permeability of free space  
-- $\sym{n}$: turns per unit length  
-- $\sym{r}$: distance from wire
+
+- <span class="sym-green">$n$</span>: turns per unit length  
+- <span class="sym-green">$r$</span>: distance from wire (m)  
 
 ---
 
 ## Magnetic Flux & Induction
+
 $$
-\eq{\sym{\Phi}_B = \sym{B}\sym{A}\cos\sym{\theta}}
+\Phi_B = B A \cos\theta
 $$
 
 Faraday’s Law:
 $$
-\eq{\sym{\varepsilon} = -\frac{d\sym{\Phi}_B}{d\sym{t}}}
+\varepsilon = -\frac{d\Phi_B}{dt}
 $$
 
 **Symbols**
-- $\sym{\Phi}_B$: magnetic flux (Wb)  
-- $\sym{\varepsilon}$: induced emf (V)  
-- $\sym{A}$: area of loop (m$^2$)
+
+- <span class="sym-green">$\Phi_B$</span>: magnetic flux (Wb)  
+- <span class="sym-green">$\varepsilon$</span>: induced emf (V)  
+- <span class="sym-green">$A$</span>: area of loop (m$^2$)  
 
 ---
 
-# Diffusion & Brownian Motion (NEW)
+# Diffusion & Brownian Motion
 
 Mean-square displacement:
 
 $$
-\eq{\sym{x}_{\text{rms}}^2 = 2\sym{D}\sym{t}\quad (1\text{D})}
+x_{\text{rms}}^2 = 2Dt \quad (1\text{D})
 $$
-
 $$
-\eq{\sym{r}_{\text{rms}}^2 = 4\sym{D}\sym{t}\quad (2\text{D})}
+r_{\text{rms}}^2 = 4Dt \quad (2\text{D})
 $$
-
 $$
-\eq{\sym{r}_{\text{rms}}^2 = 6\sym{D}\sym{t}\quad (3\text{D})}
+r_{\text{rms}}^2 = 6Dt \quad (3\text{D})
 $$
 
 Gaussian distribution:
 
 $$
-\eq{\sym{P}(\sym{x},\sym{t})=
-\frac{1}{\sqrt{4\pi \sym{D}\sym{t}}}
-\exp\!\left(-\frac{\sym{x}^2}{4\sym{D}\sym{t}}\right)}
+P(x,t)=\frac{1}{\sqrt{4\pi Dt}}
+\exp\!\left(-\frac{x^2}{4Dt}\right)
 $$
 
 Fick’s first law:
 
 $$
-\eq{\sym{J} = -\sym{D}\frac{\Delta \sym{n}}{\Delta \sym{x}}}
+J = -D\frac{\Delta n}{\Delta x}
 $$
 
 Stokes–Einstein relation:
 
 $$
-\eq{\sym{D}=\frac{\sym{k}_B\sym{T}}{6\pi \sym{\mu}\sym{r}}}
+D = \frac{k_B T}{6\pi \mu r}
 $$
 
 **Symbols**
-- $\sym{D}$: diffusion constant (m$^2$/s)  
-- $\sym{t}$: time (s)  
-- $\sym{r}_{\text{rms}}$: rms displacement (m)  
-- $\sym{P}(x,t)$: probability density  
-- $\sym{J}$: diffusion flux  
-- $\sym{n}$: concentration  
-- $\sym{\mu}$: viscosity  
-- $\sym{r}$: particle radius  
-- $\sym{T}$: temperature (K)
 
+- <span class="sym-green">$D$</span>: diffusion constant (m$^2$/s)  
+- <span class="sym-green">$t$</span>: time (s)  
+- <span class="sym-green">$r_{\text{rms}}$</span>: rms displacement (m)  
+- <span class="sym-green">$J$</span>: diffusion flux  
+- <span class="sym-green">$n$</span>: concentration  
+- <span class="sym-green">$r$</span>: particle radius (m)  
+- <span class="sym-green">$T$</span>: temperature (K)  
