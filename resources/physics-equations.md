@@ -5,21 +5,17 @@ permalink: /resources/physics-equations/
 mathjax: true
 ---
 
-<!-- MathJax config: enable colors + custom macros -->
+<!-- MathJax config: allow $...$ inline and $$...$$ display -->
 <script>
   window.MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']],
-      packages: {'[+]': ['color']},
-      macros: {
-        eq: ["\\color{#ff4fd8}{#1}", 1],   // neon magenta for full equations
-        sym: ["\\color{#7CFC00}{#1}", 1]   // green for symbols
-      }
+      displayMath: [['$$','$$'], ['\\[','\\]']]
     }
   };
 </script>
 
+<!-- MathJax for LaTeX support on this page -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
@@ -61,6 +57,10 @@ $$
 \tan\theta = \frac{\text{opp}}{\text{adj}}
 $$
 
+**Symbols**
+- $\theta$: angle  
+- hyp/opp/adj: hypotenuse / opposite / adjacent  
+
 Vector components:
 $$
 \vec A = A_x \hat i + A_y \hat j
@@ -71,11 +71,10 @@ A_x = A\cos\theta,\qquad A_y = A\sin\theta
 $$
 
 **Symbols**
-
-- <span class="sym-green">$\theta$</span>: angle  
-- hyp/opp/adj: hypotenuse / opposite / adjacent  
-- <span class="sym-green">$A$</span>: magnitude of vector  
-- <span class="sym-green">$A_x, A_y$</span>: components  
+- $\vec A$: vector  
+- $A$: magnitude  
+- $A_x, A_y$: components  
+- $\hat i,\hat j$: unit vectors  
 
 ---
 
@@ -120,12 +119,12 @@ v_f^2 = v_i^2 + 2a\Delta x
 $$
 
 **Symbols**
-
-- <span class="sym-green">$x,y$</span>: position coordinates (m)  
-- <span class="sym-green">$v_i, v_f$</span>: initial/final velocity (m/s)  
-- <span class="sym-green">$a$</span>: acceleration (m/s$^2$)  
-- <span class="sym-green">$t, \Delta t$</span>: time (s)  
-- <span class="sym-green">$\Delta x$</span>: displacement (m)  
+- $x,y$: position coordinates (m)  
+- $\vec r_i,\vec r_f$: initial/final position  
+- $v_i,v_f$: initial/final velocity (m/s)  
+- $a$: acceleration (m/s$^2$)  
+- $t,\Delta t$: time (s)  
+- $\Delta x$: displacement (m)
 
 ---
 
@@ -161,24 +160,12 @@ $$
 \vec I = \vec F\,\Delta t = m\Delta\vec v
 $$
 
-Momentum:
-$$
-\vec p = m\vec v
-$$
-
-Conservation:
-$$
-\vec p_{\text{before}} = \vec p_{\text{after}}
-$$
-
 **Symbols**
-
-- <span class="sym-green">$m$</span>: mass (kg)  
-- <span class="sym-green">$N$</span>: normal force (N)  
-- <span class="sym-green">$k$</span>: spring constant (N/m)  
-- <span class="sym-green">$\mu_s,\mu_k$</span>: static/kinetic friction coefficients  
-- <span class="sym-green">$\vec I$</span>: impulse (N·s)  
-- <span class="sym-green">$\vec p$</span>: momentum (kg·m/s)  
+- $m$: mass (kg)  
+- $N$: normal force (N)  
+- $k$: spring constant (N/m)  
+- $\mu_s,\mu_k$: static/kinetic friction coefficients  
+- $\vec I$: impulse (N·s)
 
 ---
 
@@ -191,7 +178,7 @@ $$
 
 Pressure:
 $$
-P = \frac{F}{A}
+P=\frac{F}{A}
 $$
 
 Hydrostatic pressure:
@@ -211,7 +198,7 @@ $$
 
 Continuity:
 $$
-Q = A v = \text{constant}
+Q = Av = \text{constant}
 $$
 
 Poiseuille’s law:
@@ -221,35 +208,21 @@ $$
 
 Bernoulli:
 $$
-P + \frac12\rho v^2 + \rho g y = \text{constant}
-$$
-
-**Viscous drag (Stokes)**
-$$
-F_{\text{viscous}} = 6\pi \mu R v
-$$
-
-**Terminal velocity in viscous fluid**
-$$
-v_t = \frac{2R^2(\rho_s-\rho_f)g}{9\mu}
-$$
-
-**Reynolds number**
-$$
-\mathrm{Re} = \frac{\rho R v}{\mu}
+P+\frac12\rho v^2+\rho g y = \text{constant}
 $$
 
 **Symbols**
-
-- <span class="sym-green">$\rho$</span>: density (kg/m$^3$)  
-- <span class="sym-green">$P$</span>: pressure (Pa)  
-- <span class="sym-green">$P_0$</span>: surface pressure (Pa)  
-- <span class="sym-green">$F_B$</span>: buoyant force (N)  
-- <span class="sym-green">$Q$</span>: flow rate (m$^3$/s)  
-- <span class="sym-green">$R$</span>: sphere / tube radius (m)  
-- <span class="sym-green">$L$</span>: tube length (m)  
-- <span class="sym-green">$\mu$</span>: viscosity (Pa·s)  
-- <span class="sym-green">$v_t$</span>: terminal velocity (m/s)  
+- $\rho$: density (kg/m$^3$)  
+- $P$: pressure (Pa)  
+- $P_0$: surface pressure  
+- $d$: depth (m)  
+- $F_B$: buoyant force (N)  
+- $\rho_f$: fluid density  
+- $V_f$: displaced volume  
+- $\gamma$: surface tension  
+- $Q$: flow rate (m$^3$/s)  
+- $R$: tube radius, $L$: tube length  
+- $\mu$: viscosity  
 
 ---
 
@@ -262,17 +235,17 @@ $$
 
 Kinetic energy:
 $$
-K = \frac12 m v^2
+K = \frac12 mv^2
 $$
 
 Gravitational potential energy:
 $$
-U_g = m g y
+U_g = mgy
 $$
 
 Spring potential energy:
 $$
-U_s = \frac12 k(\Delta x)^2
+U_s=\frac12 k(\Delta x)^2
 $$
 
 Total mechanical energy:
@@ -282,15 +255,14 @@ $$
 
 Power:
 $$
-P = \frac{\Delta E}{\Delta t}
+P=\frac{\Delta E}{\Delta t}
 $$
 
 **Symbols**
-
-- <span class="sym-green">$W$</span>: work (J)  
-- <span class="sym-green">$K$</span>: kinetic energy (J)  
-- <span class="sym-green">$U_g, U_s$</span>: potential energies (J)  
-- <span class="sym-green">$P$</span>: power (W)  
+- $W$: work (J)  
+- $K$: kinetic energy (J)  
+- $U_g,U_s$: potential energies (J)  
+- $P$: power (W)
 
 ---
 
@@ -298,27 +270,27 @@ $$
 
 Temperature conversion:
 $$
-T(K) = T(^{\circ}C) + 273.15
+T(K)=T(^{\circ}C)+273.15
 $$
 
 Heat:
 $$
-Q = m c \Delta T
+Q=mc\Delta T
 $$
 
 Ideal gas law:
 $$
-P V = N k_B T = n R T
+PV = Nk_BT = nRT
 $$
 
 Average kinetic energy (ideal gas):
 $$
-K_{\text{avg}} = \frac32 k_B T
+K_{\text{avg}}=\frac32 k_B T
 $$
 
 RMS speed:
 $$
-v_{\text{rms}} = \sqrt{\frac{3k_B T}{m}}
+v_{\text{rms}}=\sqrt{\frac{3k_BT}{m}}
 $$
 
 First law:
@@ -327,52 +299,46 @@ $$
 $$
 
 **Symbols**
-
-- <span class="sym-green">$Q$</span>: heat (J)  
-- <span class="sym-green">$c$</span>: specific heat (J/kg·K)  
-- <span class="sym-green">$n$</span>: moles  
-- <span class="sym-green">$N$</span>: number of molecules  
-- <span class="sym-green">$U$</span>: internal energy (J)  
+- $Q$: heat (J)  
+- $c$: specific heat (J/kg·K)  
+- $n$: moles  
+- $N$: number of molecules  
+- $U$: internal energy (J)
 
 ---
 
 # Unit 7 – Electricity & Magnetism
 
 ## Coulomb’s Law
-
 $$
 F_e = k_c\frac{|q_1 q_2|}{r^2}
 $$
 
 **Symbols**
-
-- <span class="sym-green">$F_e$</span>: electric force (N)  
-- <span class="sym-green">$k_c$</span>: Coulomb constant  
-- <span class="sym-green">$q_1, q_2$</span>: charges (C)  
-- <span class="sym-green">$r$</span>: separation (m)  
+- $F_e$: electric force (N)  
+- $k_c$: Coulomb constant  
+- $q_1,q_2$: charges (C)  
+- $r$: separation (m)
 
 ---
 
 ## Electric Field
-
 $$
 E = k_c\frac{|q|}{r^2}
 $$
 
 $$
-\vec F = q \vec E
+\vec F = q\vec E
 $$
 
 **Symbols**
-
-- <span class="sym-green">$E$</span>: electric field (N/C or V/m)  
-- <span class="sym-green">$q$</span>: charge (C)  
-- <span class="sym-green">$\vec F$</span>: force (N)  
+- $E$: electric field (N/C or V/m)  
+- $q$: charge (C)  
+- $\vec F$: force on charge (N)
 
 ---
 
 ## Electric Potential & Energy
-
 $$
 V = k_c\frac{q}{r}
 $$
@@ -382,45 +348,43 @@ U_e = k_c\frac{q_1 q_2}{r}
 $$
 
 $$
-\Delta U = q\,\Delta V
+\Delta U = q\Delta V
 $$
 
 **Symbols**
-
-- <span class="sym-green">$V$</span>: electric potential (V)  
-- <span class="sym-green">$U_e$</span>: electric potential energy (J)  
-- <span class="sym-green">$\Delta V$</span>: potential difference (V)  
+- $V$: electric potential (V)  
+- $U_e$: electric potential energy (J)  
+- $\Delta V$: potential difference
 
 ---
 
 ## Capacitance
-
 $$
-C = \frac{Q}{V}
-$$
-
-$$
-C = \varepsilon_0\frac{A}{d}
+C=\frac{Q}{V}
 $$
 
 $$
-U = \frac12 C V^2 = \frac12 QV = \frac{Q^2}{2C}
+C=\varepsilon_0\frac{A}{d}
+$$
+
+$$
+U=\frac12 CV^2=\frac12 QV=\frac{Q^2}{2C}
 $$
 
 **Symbols**
-
-- <span class="sym-green">$C$</span>: capacitance (F)  
-- <span class="sym-green">$Q$</span>: charge (C)  
-- <span class="sym-green">$V$</span>: voltage (V)  
-- <span class="sym-green">$A$</span>: plate area (m$^2$)  
-- <span class="sym-green">$d$</span>: separation (m)  
+- $C$: capacitance (F)  
+- $Q$: charge stored (C)  
+- $V$: voltage (V)  
+- $\varepsilon_0$: permittivity of free space  
+- $A$: plate area (m$^2$)  
+- $d$: separation (m)  
+- $U$: stored energy (J)
 
 ---
 
 ## Current & Ohm’s Law
-
 $$
-I = \frac{\Delta Q}{\Delta t}
+I=\frac{\Delta Q}{\Delta t}
 $$
 
 $$
@@ -429,24 +393,23 @@ $$
 
 Power:
 $$
-P = IV = I^2 R = \frac{V^2}{R}
+P = IV = I^2R = \frac{V^2}{R}
 $$
 
 Resistors in series:
 $$
-R_{\text{eq}} = R_1 + R_2 + \cdots
+R_{\text{eq}}=R_1+R_2+\cdots
 $$
 
 Resistors in parallel:
 $$
-\frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots
+\frac1{R_{\text{eq}}}=\frac1{R_1}+\frac1{R_2}+\cdots
 $$
 
 **Symbols**
-
-- <span class="sym-green">$I$</span>: current (A)  
-- <span class="sym-green">$R$</span>: resistance (Ω)  
-- <span class="sym-green">$P$</span>: power (W)  
+- $I$: current (A)  
+- $R$: resistance (Ω)  
+- $P$: power (W)
 
 ---
 
@@ -454,19 +417,17 @@ $$
 
 Moving charge:
 $$
-F_B = q v B \sin\theta
+F_B=qvB\sin\theta
 $$
 
 Current-carrying wire:
 $$
-F = I L B \sin\theta
+F=ILB\sin\theta
 $$
 
 **Symbols**
-
-- <span class="sym-green">$B$</span>: magnetic field (T)  
-- <span class="sym-green">$L$</span>: length of wire (m)  
-- <span class="sym-green">$\theta$</span>: angle between current/velocity and $B$  
+- $B$: magnetic field (T)  
+- $\theta$: angle between motion/current and $B$
 
 ---
 
@@ -474,25 +435,24 @@ $$
 
 Long straight wire:
 $$
-B = \frac{\mu_0 I}{2\pi r}
+B=\frac{\mu_0 I}{2\pi r}
 $$
 
 Solenoid:
 $$
-B = \mu_0 n I
+B=\mu_0 nI
 $$
 
 **Symbols**
-
-- <span class="sym-green">$n$</span>: turns per unit length  
-- <span class="sym-green">$r$</span>: distance from wire (m)  
+- $\mu_0$: permeability of free space  
+- $n$: turns per unit length  
+- $r$: distance from wire
 
 ---
 
 ## Magnetic Flux & Induction
-
 $$
-\Phi_B = B A \cos\theta
+\Phi_B = BA\cos\theta
 $$
 
 Faraday’s Law:
@@ -501,52 +461,149 @@ $$
 $$
 
 **Symbols**
-
-- <span class="sym-green">$\Phi_B$</span>: magnetic flux (Wb)  
-- <span class="sym-green">$\varepsilon$</span>: induced emf (V)  
-- <span class="sym-green">$A$</span>: area of loop (m$^2$)  
+- $\Phi_B$: magnetic flux (Wb)  
+- $\varepsilon$: induced emf (V)  
+- $A$: area of loop (m$^2$)
 
 ---
 
-# Diffusion & Brownian Motion
+## (New) Capacitors in Series/Parallel
+
+Series:
+$$
+\frac{1}{C_{\text{eq}}}=\frac{1}{C_1}+\frac{1}{C_2}+\cdots
+$$
+
+Parallel:
+$$
+C_{\text{eq}}=C_1+C_2+\cdots
+$$
+
+**Symbols**
+- $C_{\text{eq}}$: equivalent capacitance (F)
+
+---
+
+## (New) Lorentz Force (vector form)
+
+$$
+\vec F = q\vec E + q\,\vec v\times \vec B
+$$
+
+**Symbols**
+- $\vec v$: velocity of charge (m/s)  
+- $\times$: cross product  
+
+---
+
+# Unit 8 – Diffusion, Brownian Motion & Terminal Velocity (Labs)
+
+## Brownian Motion / Diffusion
 
 Mean-square displacement:
 
+1D:
 $$
-x_{\text{rms}}^2 = 2Dt \quad (1\text{D})
-$$
-$$
-r_{\text{rms}}^2 = 4Dt \quad (2\text{D})
-$$
-$$
-r_{\text{rms}}^2 = 6Dt \quad (3\text{D})
+x_{\text{rms}}^2 = 2Dt
 $$
 
-Gaussian distribution:
-
+2D:
 $$
-P(x,t)=\frac{1}{\sqrt{4\pi Dt}}
-\exp\!\left(-\frac{x^2}{4Dt}\right)
+r_{\text{rms}}^2 = 4Dt
 $$
 
-Fick’s first law:
+3D:
+$$
+r_{\text{rms}}^2 = 6Dt
+$$
 
+Diffusion flux (Fick’s law):
 $$
 J = -D\frac{\Delta n}{\Delta x}
 $$
 
-Stokes–Einstein relation:
-
+Stokes-Einstein relation:
 $$
-D = \frac{k_B T}{6\pi \mu r}
+D = \frac{k_B T}{6\pi\mu r}
 $$
 
 **Symbols**
+- $D$: diffusion constant (m$^2$/s)  
+- $t$: time (s)  
+- $J$: diffusion flux  
+- $n$: concentration  
+- $\mu$: viscosity (Pa·s)  
+- $r$: particle radius (m)  
+- $T$: temperature (K)
 
-- <span class="sym-green">$D$</span>: diffusion constant (m$^2$/s)  
-- <span class="sym-green">$t$</span>: time (s)  
-- <span class="sym-green">$r_{\text{rms}}$</span>: rms displacement (m)  
-- <span class="sym-green">$J$</span>: diffusion flux  
-- <span class="sym-green">$n$</span>: concentration  
-- <span class="sym-green">$r$</span>: particle radius (m)  
-- <span class="sym-green">$T$</span>: temperature (K)  
+---
+
+## Viscous Drag (Stokes’ Law)
+
+Force on a small sphere moving in a viscous fluid:
+$$
+F_{\text{viscous}} = 6\pi\mu r v
+$$
+
+**Symbols**
+- $F_{\text{viscous}}$: drag force (N)  
+- $v$: speed (m/s)
+
+---
+
+## Terminal Velocity (falling sphere)
+
+When drag balances effective weight:
+
+$$
+v_t = \frac{2r^2(\rho_s-\rho_f)g}{9\mu}
+$$
+
+**Symbols**
+- $v_t$: terminal velocity (m/s)  
+- $\rho_s$: sphere density (kg/m$^3$)  
+- $\rho_f$: fluid density (kg/m$^3$)
+
+---
+
+## Vesicle Transport (motor proteins)
+
+Velocity-ATP relation:
+$$
+v = R\,s
+$$
+
+**Symbols**
+- $v$: vesicle speed (m/s)  
+- $R$: ATP hydrolysis rate (cycles/s)  
+- $s$: motor step size (m)  
+  - kinesin: $s \approx 8\,\mathrm{nm}$  
+  - myosin V: $s \approx 36\,\mathrm{nm}$  
+
+---
+
+## Useful pixel → SI conversions (ImageJ labs)
+
+If your tracking gives values in micrometers:
+
+$$
+1\ \mu\text{m} = 10^{-6}\ \text{m}
+$$
+
+If tracking gives pixels and your calibration is:
+
+$$
+1\ \text{pixel} \approx 0.193\ \mu\text{m}
+$$
+
+then
+
+$$
+v(\text{m/s}) = v(\text{pixels/s})\times 0.193\times 10^{-6}
+$$
+
+and
+
+$$
+r(\text{m}) = r(\text{pixels})\times 0.193\times 10^{-6}
+$$
