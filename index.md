@@ -46,7 +46,7 @@ permalink: /
     <h2>About me</h2>
 
     <p>
-      I am a PhD candidate in Physics at Wayne State University in Detroit, USA. 
+      I am a PhD candidate in Physics at Wayne State University in Detroit, Michigan USA. 
       My research is in theoretical condensed matter physics, focusing on superconductivity 
       and non-reciprocal transport in planar Josephson junctions.
     </p>
@@ -72,9 +72,10 @@ permalink: /
       <div>
         <h3>Education</h3>
         <ul>
-          <li>PhD Physics, Wayne State University (ongoing)</li>
-          <li>MSc Physics, University of Kerala</li>
-          <li>BSc Physics, University of Kerala</li>
+          <li>PhD. Physics, Wayne State University (ongoing)</li>
+          <li>M.S. Physics, Wayne State University, Michigan, USA</li>
+          <li>M.Sc. Physics, Mahatma Gandhi University, Kerala, India</li>
+          <li>B.Sc. Physics, Mahatma Gandhi University, Kerala, India<\li>
         </ul>
       </div>
     </div>
