@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Physics Equations
+title: false
 permalink: /resources/physics-equations/
 mathjax: true
 ---
