@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ""
-permalink: /equations/
+permalink: /resources/physics-equations/
 ---
 
 Below is a compact equation sheet for physics 1 students.  
