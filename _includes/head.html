@@ -12,11 +12,18 @@
     {%- endif -%}
   {% endcapture %}
 
+  {# --- IMPORTANT FIX: normalize/strip whitespace from pagetitle --- #}
+  {% assign pagetitle = pagetitle | strip %}
+
   {% capture title %}
-    {%- if site.title and site.title-on-all-pages and (site.title != pagetitle) -%}
+    {%- if pagetitle != "" and site.title and site.title-on-all-pages and (site.title != pagetitle) -%}
       {{ pagetitle }} | {{ site.title }}
     {%- else -%}
-      {{ pagetitle }}
+      {%- if pagetitle != "" -%}
+        {{ pagetitle }}
+      {%- else -%}
+        {{ site.title }}
+      {%- endif -%}
     {%- endif -%}
   {% endcapture %}
 
