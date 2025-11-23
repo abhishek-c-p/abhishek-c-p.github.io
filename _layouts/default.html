@@ -23,3 +23,11 @@ layout: base
     </div>
   {% endif %}
 </main>
+
+<title>
+  {% if page.title %}
+    {{ page.title }} | {{ site.title }}
+  {% else %}
+    {{ site.title }}
+  {% endif %}
+</title>
