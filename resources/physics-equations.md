@@ -23,9 +23,9 @@ Each equation includes a quick guide to symbols.
 
 ### Kinematics
 
-\[
+$$
 v_{\text{avg}} = \frac{\Delta x}{\Delta t}
-\]
+$$
 
 **Symbols**
 - \(v_{\text{avg}}\): average velocity (m/s)  
