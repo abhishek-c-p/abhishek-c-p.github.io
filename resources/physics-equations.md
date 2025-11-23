@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Physics 2130 Equation Sheet"
-permalink: /equations/
+permalink: /resources/physics-equations/
 mathjax: true
 ---
 
