@@ -5,35 +5,25 @@ permalink: /resources/physics-equations/
 mathjax: true
 ---
 
-<!-- MathJax config: allow $...$ inline and $$...$$ display -->
+<!-- MathJax config: enable colors + custom macros -->
 <script>
   window.MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']]
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      packages: {'[+]': ['color']},
+      macros: {
+        eq: ["\\color{#ff4fd8}{#1}", 1],   // neon magenta for full equations
+        sym: ["\\color{#7CFC00}{#1}", 1]   // green for symbols
+      }
     }
   };
 </script>
 
-<!-- MathJax for LaTeX support on this page -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
-
-<!-- Colors: equations = neon magenta, symbols = green -->
-<style>
-/* All math glyphs (inline + display) */
-mjx-container[jax="CHTML"] mjx-math {
-  color: #ff4fd8;  /* neon magenta */
-}
-
-/* Symbol labels in the “Symbols” lists */
-.sym-green {
-  color: #7CFC00;   /* bright green */
-  font-weight: 600;
-}
-</style>
 
 # Physics Equations (PHY 2130 / 2140)
 
