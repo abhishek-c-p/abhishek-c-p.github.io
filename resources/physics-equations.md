@@ -21,7 +21,7 @@ Each equation includes a quick guide to symbols.
 $$ v_{\text{avg}} = \frac{\Delta x}{\Delta t}$$
 
 **Symbols**
-- \(v_{\text{avg}}\): average velocity (m/s)  
+- $(v_{\text{avg}}$: average velocity (m/s)  
 - \(\Delta x\): displacement (m)  
 - \(\Delta t\): time interval (s)
 
