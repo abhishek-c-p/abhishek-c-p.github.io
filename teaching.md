@@ -43,7 +43,7 @@ s(t) = \frac{1}{2} a t^2 + v_0 t + s_0
 \end{equation}
 ```
 
-## Testimonials
+
 
 <style>
   .testimonial-marquee {
@@ -62,7 +62,7 @@ s(t) = \frac{1}{2} a t^2 + v_0 t + s_0
     display: flex;
     gap: 1.5rem;
     width: max-content;
-    animation: testimonial-scroll 70s linear infinite;
+    animation: testimonial-scroll 120s linear infinite;
     align-items: center;
   }
 
