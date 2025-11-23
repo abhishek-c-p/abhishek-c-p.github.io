@@ -95,12 +95,23 @@ s(t) = \frac{1}{2} a t^2 + v_0 t + s_0
 <div class="testimonial-marquee" aria-label="Student teaching evaluations carousel">
   <div class="testimonial-track">
     {% for i in (1..20) %}
-      <img src="/assets/img/testimonials/t{{ i }}.jpg" alt="Student teaching evaluation {{ i }}">
+      {% if i < 10 %}
+        {% assign num = "0" | append: i %}
+      {% else %}
+        {% assign num = i %}
+      {% endif %}
+      <img src="/assets/img/testimonials/quote_dark_wsu_{{ num }}.jpg"
+           alt="Student teaching evaluation {{ i }}">
     {% endfor %}
 
     <!-- Duplicate for seamless loop -->
     {% for i in (1..20) %}
-      <img src="/assets/img/testimonials/t{{ i }}.jpg" alt="">
+      {% if i < 10 %}
+        {% assign num = "0" | append: i %}
+      {% else %}
+        {% assign num = i %}
+      {% endif %}
+      <img src="/assets/img/testimonials/quote_dark_wsu_{{ num }}.jpg" alt="">
     {% endfor %}
   </div>
 </div>
