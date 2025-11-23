@@ -43,7 +43,7 @@ permalink: /
 
   <!-- RIGHT COLUMN -->
   <div class="home-about-right">
-    <h2>About me</h2>
+    <h2></h2>
 
     <p>
       I am a PhD candidate in Physics at Wayne State University in Detroit, Michigan USA. 
@@ -75,7 +75,7 @@ permalink: /
           <li>PhD. Physics, Wayne State University (ongoing)</li>
           <li>M.S. Physics, Wayne State University, Michigan, USA</li>
           <li>M.Sc. Physics, Mahatma Gandhi University, Kerala, India</li>
-          <li>B.Sc. Physics, Mahatma Gandhi University, Kerala, India<\li>
+          <li>B.Sc. Physics, Mahatma Gandhi University, Kerala, India</li>
         </ul>
       </div>
     </div>
