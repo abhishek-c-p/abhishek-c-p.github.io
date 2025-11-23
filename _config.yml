@@ -280,6 +280,12 @@ defaults:
     values:
       layout: "page"
 
+  - scope:
+      path: ""
+    values:
+      mathjax: true
+
+
 # Exclude these files from production site
 exclude:
   - CHANGELOG.md
