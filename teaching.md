@@ -12,7 +12,7 @@ title: Teaching
 ## Teaching experience
 
 - Graduate Teaching Assistant, Wayne State University  
-  - Introductory physics labs for life‑science and pre‑med students  
+  - Introductory physics labs for life-science and pre-med students  
   - University physics labs for science and engineering majors  
 
 I enjoy designing explanations, problem sets, and lab activities that connect physics ideas to real-world contexts and
@@ -45,17 +45,62 @@ s(t) = \frac{1}{2} a t^2 + v_0 t + s_0
 
 ## Testimonials
 
-<div class="testimonial-marquee">
+<style>
+  .testimonial-marquee {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+
+    /* soft fade at edges */
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+
+  .testimonial-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: testimonial-scroll 70s linear infinite;
+    align-items: center;
+  }
+
+  .testimonial-track img {
+    height: 260px;
+    width: auto;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+    transition: transform 0.2s ease;
+  }
+
+  .testimonial-track img:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+
+  @keyframes testimonial-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .testimonial-track { animation: none; }
+  }
+
+  @media (max-width: 768px) {
+    .testimonial-track img { height: 200px; }
+  }
+</style>
+
+<div class="testimonial-marquee" aria-label="Student teaching evaluations carousel">
   <div class="testimonial-track">
-    <img src="/assets/img/testimonials/t1.png" alt="Teaching eval 1">
-    <img src="/assets/img/testimonials/t2.png" alt="Teaching eval 2">
-    <img src="/assets/img/testimonials/t3.png" alt="Teaching eval 3">
-    <img src="/assets/img/testimonials/t4.png" alt="Teaching eval 4">
+    {% for i in (1..20) %}
+      <img src="/assets/img/testimonials/t{{ i }}.jpg" alt="Student teaching evaluation {{ i }}">
+    {% endfor %}
 
     <!-- Duplicate for seamless loop -->
-    <img src="/assets/img/testimonials/t1.png" alt="">
-    <img src="/assets/img/testimonials/t2.png" alt="">
-    <img src="/assets/img/testimonials/t3.png" alt="">
-    <img src="/assets/img/testimonials/t4.png" alt="">
+    {% for i in (1..20) %}
+      <img src="/assets/img/testimonials/t{{ i }}.jpg" alt="">
+    {% endfor %}
   </div>
 </div>
