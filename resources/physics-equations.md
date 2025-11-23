@@ -5,6 +5,13 @@ permalink: /resources/physics-equations/
 mathjax: true
 ---
 
+<!-- MathJax for LaTeX support on this page -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+
 # Physics Equations (PHY 2130 / 2140)
 
 Below is a compact equation sheet for Physics 1 students.  
