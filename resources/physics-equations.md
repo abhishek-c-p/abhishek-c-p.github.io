@@ -1,9 +1,9 @@
 ---
 layout: page
-title: 
-permalink: /resources/physics-equations/
----
+title: "Physics 2130 Equation Sheet"
+permalink: /equations/
 mathjax: true
+---
 
 Below is a compact equation sheet for Physics 1 students.  
 Each equation includes a quick guide to symbols.
@@ -11,18 +11,20 @@ Each equation includes a quick guide to symbols.
 ---
 
 ## Constants
+
 - \(G = 6.67\times 10^{-11}\, \mathrm{N\,m^2/kg^2}\)
-- \(M_{\oplus} = 5.97\times 10^{24}\,\mathrm{kg}\)
-- \(R_{\oplus} = 6.38\times 10^{6}\,\mathrm{m}\)
-- \(g = 9.8\,\mathrm{N/kg} = 9.8\,\mathrm{m/s^2}\)
-- \(k_B = 1.38\times 10^{-23}\,\mathrm{J/K}\)
-- \(R = 8.31\,\mathrm{J/(mol\,K)}\)
-- \(e = 1.602\times 10^{-19}\,\mathrm{C}\)
-- \(k_c = 8.99\times 10^{9}\,\mathrm{N\,m^2/C^2}\)
+- \(M_{\oplus} = 5.97\times 10^{24}\, \mathrm{kg}\)
+- \(R_{\oplus} = 6.38\times 10^{6}\, \mathrm{m}\)
+- \(g = 9.8\, \mathrm{N/kg} = 9.8\, \mathrm{m/s^2}\)
+- \(k_B = 1.38\times 10^{-23}\, \mathrm{J/K}\)
+- \(R = 8.31\, \mathrm{J/(mol\,K)}\)
+- \(e = 1.602\times 10^{-19}\, \mathrm{C}\)
+- \(k_c = 8.99\times 10^{9}\, \mathrm{N\,m^2/C^2}\)
 
 ---
 
 ## Vector / Trig Summary
+
 Right triangle:
 \[
 \text{hyp}^2 = \text{opp}^2 + \text{adj}^2
@@ -34,58 +36,64 @@ Right triangle:
 \tan\theta = \frac{\text{opp}}{\text{adj}}
 \]
 
-Where:
-- \(\theta\) = angle
-- opp/adj/hyp = opposite / adjacent / hypotenuse sides
+**Symbols**
+- \(\theta\): angle  
+- hyp/opp/adj: hypotenuse / opposite side / adjacent side  
+
+Vector components (2D):
+\[
+\vec A = A_x \hat{i} + A_y \hat{j},\qquad
+A_x = A\cos\theta,\quad A_y = A\sin\theta
+\]
+
+**Symbols**
+- \(\vec A\): vector  
+- \(A\): magnitude  
+- \(A_x, A_y\): components  
+- \(\hat i,\hat j\): unit vectors  
 
 ---
 
-## Unit 1 – Introduction / Geometry
-Sphere:
-\[
-A = 4\pi r^2,\quad V = \frac{4}{3}\pi r^3
-\]
+## Unit 2 – Motion (Kinematics)
 
-Cylinder (no endcaps):
-\[
-A = 2\pi r h,\quad V = \pi r^2 h
-\]
-
-Where:
-- \(A\) = surface area, \(V\) = volume
-- \(r\) = radius, \(h\) = height
-
----
-
-## Unit 2 – Motion
 Position vector:
 \[
 \vec r = x\,\hat i + y\,\hat j
 \]
 
+**Symbols**
+- \(\vec r\): position (m)  
+- \(x,y\): coordinates (m)
+
 Displacement:
 \[
-\Delta \vec r = \vec r_f - \vec r_i = \Delta x\,\hat i + \Delta y\,\hat j
+\Delta\vec r = \vec r_f - \vec r_i
 \]
 
-Average speed:
-\[
-v_{\text{avg}} = \frac{\text{distance}}{\Delta t}
-\]
+**Symbols**
+- \(\Delta\vec r\): displacement (m)  
+- \(\vec r_i,\vec r_f\): initial/final position  
 
 Average velocity:
 \[
-\vec v_{\text{avg}} = \frac{\Delta \vec r}{\Delta t}
+\vec v_{\text{avg}} = \frac{\Delta\vec r}{\Delta t}
 \]
 
-Acceleration:
+**Symbols**
+- \(\vec v_{\text{avg}}\): average velocity (m/s)  
+- \(\Delta t\): time interval (s)
+
+Average acceleration:
 \[
-\vec a = \frac{\Delta \vec v}{\Delta t}
+\vec a_{\text{avg}} = \frac{\Delta\vec v}{\Delta t}
 \]
 
-Kinematics (constant \(a\)):
+**Symbols**
+- \(\vec a_{\text{avg}}\): average acceleration (m/s\(^2\))
+
+Constant-acceleration relations:
 \[
-v_f = v_i + a\,\Delta t
+v_f = v_i + a\Delta t
 \]
 \[
 \Delta x = v_i\Delta t + \frac12 a(\Delta t)^2
@@ -94,15 +102,15 @@ v_f = v_i + a\,\Delta t
 v_f^2 = v_i^2 + 2a\Delta x
 \]
 
-Where:
-- \(x,y\) = coordinates
-- \(v_i, v_f\) = initial/final velocity
-- \(a\) = acceleration
-- \(\Delta t\) = time interval
+**Symbols**
+- \(v_i,v_f\): initial/final velocity (m/s)  
+- \(a\): constant acceleration (m/s\(^2\))  
+- \(\Delta x\): displacement (m)
 
 ---
 
 ## Unit 3 – Forces & Newton’s Laws
+
 Net force:
 \[
 \vec F_{\text{net}}=\sum \vec F
@@ -110,47 +118,47 @@ Net force:
 
 Newton’s 2nd law:
 \[
-\vec F_{\text{net}}=m\vec a
+\vec F_{\text{net}} = m\vec a
 \]
 
-Impulse:
+Weight:
 \[
-\vec I = \vec F\,\Delta t = m\Delta \vec v
+W = mg
 \]
 
-Hooke’s law (spring):
+Hooke’s law:
 \[
-F_s = k\,\Delta x
+F_s = k\Delta x
 \]
 
 Friction:
 \[
-f_s \le \mu_s N,\qquad f_k=\mu_k N
+f_s\le \mu_s N,\qquad f_k=\mu_k N
 \]
 
-Viscous drag (sphere):
+Impulse:
 \[
-F_{\text{drag}}=6\pi \mu R v
+\vec I = \vec F\,\Delta t = m\Delta\vec v
 \]
 
-Where:
-- \(m\) = mass, \(a\) = acceleration
-- \(k\) = spring constant
-- \(N\) = normal force
-- \(\mu_s,\mu_k\) = static/kinetic friction coefficients
-- \(\mu\) = viscosity, \(R\) = sphere radius, \(v\) = speed
+**Symbols**
+- \(m\): mass (kg)  
+- \(N\): normal force (N)  
+- \(k\): spring constant (N/m)  
+- \(\mu_s,\mu_k\): friction coefficients  
 
 ---
 
-## Unit 4 – Solids & Fluids
+## Unit 4 – Fluids
+
 Density:
 \[
-\rho=\frac{m}{V}
+\rho = \frac{m}{V}
 \]
 
 Pressure:
 \[
-P=\frac{F}{A}
+P = \frac{F}{A}
 \]
 
 Hydrostatic pressure:
@@ -163,55 +171,14 @@ Buoyant force:
 F_B = \rho_f V_f g
 \]
 
-Surface tension pressure:
-\[
-\Delta P=\frac{2\gamma}{r}
-\]
-
-Flow rate:
+Continuity:
 \[
 Q = Av = \text{constant}
 \]
 
 Poiseuille’s law:
 \[
-Q=\frac{\pi R^4}{8\mu L}\,\Delta P
-\]
-
-Where:
-- \(\rho\) = density
-- \(P_0\) = surface pressure
-- \(d\) = depth
-- \(\rho_f\) = fluid density, \(V_f\) = displaced volume
-- \(\gamma\) = surface tension
-- \(A\) = cross-section area, \(R\) = tube radius, \(L\) = tube length
-
----
-
-## Unit 5 – Energy & Work
-Total energy:
-\[
-E_{\text{tot}} = K + U + E_{\text{th}} + \cdots
-\]
-
-Work:
-\[
-W = F_{\parallel} d
-\]
-
-Kinetic energy:
-\[
-K=\frac12 mv^2
-\]
-
-Gravitational potential energy:
-\[
-U_g = mgy
-\]
-
-Spring potential energy:
-\[
-U_s=\frac12 k(\Delta x)^2
+Q = \frac{\pi R^4}{8\mu L}\Delta P
 \]
 
 Bernoulli:
@@ -219,32 +186,57 @@ Bernoulli:
 P+\frac12\rho v^2+\rho g y = \text{constant}
 \]
 
-Where:
-- \(K\) = kinetic energy, \(U\) = potential energy
-- \(F_{\parallel}\) = component of force along motion
-- \(y\) = height
+**Symbols**
+- \(\rho\): density (kg/m\(^3\))  
+- \(\mu\): viscosity (Pa·s)  
+- \(Q\): flow rate (m\(^3\)/s)
+
+---
+
+## Unit 5 – Energy
+
+Work:
+\[
+W=F_\parallel d
+\]
+
+Kinetic energy:
+\[
+K=\frac12 mv^2
+\]
+
+Gravitational potential:
+\[
+U_g=mgy
+\]
+
+Spring potential:
+\[
+U_s=\frac12 k(\Delta x)^2
+\]
+
+Conservation of energy:
+\[
+E_{\text{tot}} = K + U + E_{\text{th}} + \dots
+\]
 
 ---
 
 ## Unit 6 – Thermodynamics
-Temperature conversion:
+
+Temperature:
 \[
 T(K)=T(^{\circ}C)+273.15
 \]
 
 Heat:
 \[
-Q=mc\Delta T
-\]
-
-Power:
-\[
-P=\frac{\Delta E}{\Delta t}
+Q = mc\Delta T
 \]
 
 Ideal gas law:
 \[
-PV = Nk_B T = nRT
+PV = Nk_BT = nRT
 \]
 
 First law:
@@ -252,197 +244,94 @@ First law:
 \Delta U = W + Q
 \]
 
-Where:
-- \(c\) = specific heat
-- \(n\) = moles, \(N\) = number of particles
-- \(U\) = internal energy
-
 ---
 
-# Unit 7 – Electricity & Magnetism (NEW)
+## Unit 7 – Electricity & Magnetism
 
-## Electric Charge & Force
-Coulomb’s law:
+### Coulomb’s law
 \[
-F_e = k_c\frac{|q_1 q_2|}{r^2}
+F_e = k_c\frac{|q_1q_2|}{r^2}
 \]
 
-Where:
-- \(F_e\) = electric force
-- \(k_c = 8.99\times 10^9\,\mathrm{N\,m^2/C^2}\)
-- \(q_1, q_2\) = charges
-- \(r\) = separation
+**Symbols**
+- \(F_e\): electric force (N)  
+- \(k_c\): Coulomb constant  
+- \(q_1,q_2\): charges (C)  
+- \(r\): separation (m)
 
----
-
-## Electric Field
-Field of a point charge:
+### Electric field
 \[
 E = k_c\frac{|q|}{r^2}
 \]
-
-Force on a charge in a field:
 \[
 \vec F = q\vec E
 \]
 
-Where:
-- \(E\) = electric field (\(\mathrm{N/C}\) or \(\mathrm{V/m}\))
-- \(q\) = charge experiencing the field
+**Symbols**
+- \(E\): electric field (N/C)  
+- \(q\): charge (C)
 
----
-
-## Electric Potential & Energy
-Potential of a point charge:
+### Electric potential & energy
 \[
 V = k_c\frac{q}{r}
 \]
-
-Electric potential energy:
 \[
-U_e = k_c\frac{q_1 q_2}{r}
+U_e = k_c\frac{q_1q_2}{r}
+\]
+\[
+\Delta U = q\Delta V
 \]
 
-Change in potential energy:
-\[
-\Delta U = q\,\Delta V
-\]
-
-Where:
-- \(V\) = electric potential (volts)
-- \(U_e\) = electric potential energy
-- \(\Delta V\) = potential difference
-
----
-
-## Capacitors
-Capacitance:
+### Capacitance
 \[
 C=\frac{Q}{V}
 \]
-
-Parallel-plate capacitor:
 \[
 C=\varepsilon_0\frac{A}{d}
 \]
-
-Energy stored:
 \[
-U=\frac12 CV^2=\frac12 QV=\frac{Q^2}{2C}
+U=\frac12 CV^2
 \]
 
-Where:
-- \(C\) = capacitance (farads)
-- \(Q\) = charge stored
-- \(A\) = plate area, \(d\) = separation
-- \(\varepsilon_0 = 8.85\times10^{-12}\,\mathrm{C^2/(N\,m^2)}\)
-
----
-
-## Current & Circuits
-Current:
+### Current & Ohm’s law
 \[
 I=\frac{\Delta Q}{\Delta t}
 \]
-
-Ohm’s law:
 \[
-V = IR
+V=IR
+\]
+\[
+P=IV=I^2R=\frac{V^2}{R}
 \]
 
-Resistance from material:
+Series/parallel:
 \[
-R=\rho\frac{L}{A}
+R_{\text{eq}} = R_1+R_2+\cdots
+\]
+\[
+\frac1{R_{\text{eq}}}=\frac1{R_1}+\frac1{R_2}+\cdots
 \]
 
-Electric power:
-\[
-P = IV = I^2R = \frac{V^2}{R}
-\]
-
-Resistors:
-- Series:  \(\;R_{\text{eq}}=R_1+R_2+\cdots\)
-- Parallel: \(\;\frac1{R_{\text{eq}}}=\frac1{R_1}+\frac1{R_2}+\cdots\)
-
-Where:
-- \(I\) = current (amps)
-- \(R\) = resistance (ohms)
-- \(\rho\) = resistivity
-- \(L\) = wire length, \(A\) = cross-section area
-
----
-
-## Magnetic Force
-Force on moving charge:
+### Magnetic force
 \[
 F_B = qvB\sin\theta
 \]
-
-Force on current-carrying wire:
 \[
 F = ILB\sin\theta
 \]
 
-Where:
-- \(B\) = magnetic field (tesla)
-- \(v\) = charge speed
-- \(I\) = current
-- \(L\) = wire length in field
-- \(\theta\) = angle between \(v\) (or wire) and \(B\)
-
----
-
-## Magnetic Fields from Currents
-Long straight wire:
+### Magnetic field from currents
 \[
 B=\frac{\mu_0 I}{2\pi r}
 \]
-
-Solenoid:
 \[
-B=\mu_0 n I
+B=\mu_0 nI
 \]
 
-Where:
-- \(\mu_0=4\pi\times10^{-7}\,\mathrm{T\,m/A}\)
-- \(n\) = turns per length
-- \(r\) = distance from wire
-
----
-
-## Magnetic Flux & Induction
-Magnetic flux:
+### Magnetic flux & induction
 \[
 \Phi_B = BA\cos\theta
 \]
-
-Faraday’s law:
 \[
 \varepsilon = -\frac{d\Phi_B}{dt}
 \]
-
-Where:
-- \(\Phi_B\) = magnetic flux (weber)
-- \(\varepsilon\) = induced emf (volts)
-- \(A\) = loop area
-
----
-
-## Torque on a Current Loop (optional)
-Magnetic dipole moment:
-\[
-\mu = NIA
-\]
-
-Torque:
-\[
-\tau = \mu B\sin\theta
-\]
-
-Where:
-- \(N\) = number of turns
-- \(\mu\) = magnetic moment
-- \(\tau\) = torque
-
----
-
