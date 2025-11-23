@@ -5,7 +5,21 @@ permalink: /resources/physics-equations/
 mathjax: true
 ---
 
+<!-- MathJax config: allow $...$ inline and $$...$$ display -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']]
+    }
+  };
+</script>
 
+<!-- MathJax for LaTeX support on this page -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 
 # Physics Equations (PHY 2130 / 2140)
 
@@ -14,184 +28,439 @@ Each equation includes a quick guide to symbols.
 
 ---
 
-## Mechanics
+## Constants
 
-### Kinematics
+- $G = 6.67\times 10^{-11}\, \mathrm{N\,m^2/kg^2}$
+- $M_{\oplus} = 5.97\times 10^{24}\, \mathrm{kg}$
+- $R_{\oplus} = 6.38\times 10^{6}\, \mathrm{m}$
+- $g = 9.8\, \mathrm{N/kg} = 9.8\, \mathrm{m/s^2}$
+- $k_B = 1.38\times 10^{-23}\, \mathrm{J/K}$
+- $R = 8.31\, \mathrm{J/(mol\,K)}$
+- $e = 1.602\times 10^{-19}\, \mathrm{C}$
+- $k_c = 8.99\times 10^{9}\, \mathrm{N\,m^2/C^2}$
 
-$$ v_{\text{avg}} = \frac{\Delta x}{\Delta t}$$
+---
+
+## Vector / Trig Summary
+
+Right triangle:
+$$
+\text{hyp}^2 = \text{opp}^2 + \text{adj}^2
+$$
+
+Trig:
+$$
+\sin\theta = \frac{\text{opp}}{\text{hyp}},\qquad
+\cos\theta = \frac{\text{adj}}{\text{hyp}},\qquad
+\tan\theta = \frac{\text{opp}}{\text{adj}}
+$$
 
 **Symbols**
-- $v_{\text{avg}}$: average velocity (m/s)  
-- $\Delta x$: displacement (m)  
-- \(\Delta t\): time interval (s)
+- $\theta$: angle  
+- hyp/opp/adj: hypotenuse / opposite / adjacent  
 
-\[
-a_{\text{avg}} = \frac{\Delta v}{\Delta t}
-\]
+Vector components:
+$$
+\vec A = A_x \hat i + A_y \hat j
+$$
+
+$$
+A_x = A\cos\theta,\qquad A_y = A\sin\theta
+$$
 
 **Symbols**
-- \(a_{\text{avg}}\): average acceleration (m/s\(^2\))  
-- \(\Delta v\): change in velocity (m/s)
+- $\vec A$: vector  
+- $A$: magnitude  
+- $A_x, A_y$: components  
+- $\hat i,\hat j$: unit vectors  
 
-Constant-acceleration formulas:
+---
 
-\[
+## Unit 2 – Motion (Kinematics)
+
+Position:
+$$
+\vec r = x\,\hat i + y\,\hat j
+$$
+
+Displacement:
+$$
+\Delta\vec r = \vec r_f - \vec r_i
+$$
+
+Average speed:
+$$
+v_{\text{avg}} = \frac{\text{distance}}{\Delta t}
+$$
+
+Average velocity:
+$$
+\vec v_{\text{avg}} = \frac{\Delta\vec r}{\Delta t}
+$$
+
+Average acceleration:
+$$
+\vec a_{\text{avg}} = \frac{\Delta\vec v}{\Delta t}
+$$
+
+Constant-acceleration relations:
+$$
 v_f = v_i + a t
-\]
-\[
-x_f = x_i + v_i t + \frac12 a t^2
-\]
-\[
-v_f^2 = v_i^2 + 2a(x_f-x_i)
-\]
+$$
 
----
+$$
+\Delta x = v_i t + \frac12 a t^2
+$$
 
-## Electricity & Magnetism
-
-### Coulomb’s Law
-
-\[
-F_e = k_c\frac{|q_1q_2|}{r^2}
-\]
+$$
+v_f^2 = v_i^2 + 2a\Delta x
+$$
 
 **Symbols**
-- \(F_e\): electric force (N)  
-- \(k_c\): Coulomb constant \(=8.99\times10^9\,\mathrm{N\,m^2/C^2}\)  
-- \(q_1,q_2\): charges (C)  
-- \(r\): separation (m)
+- $x,y$: position coordinates (m)  
+- $\vec r_i,\vec r_f$: initial/final position  
+- $v_i,v_f$: initial/final velocity (m/s)  
+- $a$: acceleration (m/s$^2$)  
+- $t,\Delta t$: time (s)  
+- $\Delta x$: displacement (m)
 
 ---
 
-### Electric Field
+## Unit 3 – Forces & Newton’s Laws
 
-\[
-E = k_c\frac{|q|}{r^2}
-\qquad
-\vec F = q\vec E
-\]
+Net force:
+$$
+\vec F_{\text{net}}=\sum \vec F
+$$
+
+Newton’s 2nd law:
+$$
+\vec F_{\text{net}}=m\vec a
+$$
+
+Weight:
+$$
+W = mg
+$$
+
+Hooke’s law:
+$$
+F_s = k\Delta x
+$$
+
+Friction:
+$$
+f_s \le \mu_s N,\qquad f_k=\mu_k N
+$$
+
+Impulse:
+$$
+\vec I = \vec F\,\Delta t = m\Delta\vec v
+$$
 
 **Symbols**
-- \(E\): electric field (N/C or V/m)  
-- \(q\): charge producing/feeling the field (C)  
-- \(\vec F\): force on a charge (N)
+- $m$: mass (kg)  
+- $N$: normal force (N)  
+- $k$: spring constant (N/m)  
+- $\mu_s,\mu_k$: static/kinetic friction coefficients  
+- $\vec I$: impulse (N·s)
 
 ---
 
-### Electric Potential
+## Unit 4 – Solids & Fluids
 
-\[
-V = k_c\frac{q}{r}
-\]
-\[
-\Delta U = q\Delta V
-\]
+Density:
+$$
+\rho = \frac{m}{V}
+$$
+
+Pressure:
+$$
+P=\frac{F}{A}
+$$
+
+Hydrostatic pressure:
+$$
+P = P_0 + \rho g d
+$$
+
+Buoyant force:
+$$
+F_B = \rho_f V_f g
+$$
+
+Surface tension pressure:
+$$
+\Delta P = \frac{2\gamma}{r}
+$$
+
+Continuity:
+$$
+Q = Av = \text{constant}
+$$
+
+Poiseuille’s law:
+$$
+Q = \frac{\pi R^4}{8\mu L}\Delta P
+$$
+
+Bernoulli:
+$$
+P+\frac12\rho v^2+\rho g y = \text{constant}
+$$
 
 **Symbols**
-- \(V\): electric potential (V)  
-- \(\Delta U\): change in electric potential energy (J)
+- $\rho$: density (kg/m$^3$)  
+- $P$: pressure (Pa)  
+- $P_0$: surface pressure  
+- $d$: depth (m)  
+- $F_B$: buoyant force (N)  
+- $\rho_f$: fluid density  
+- $V_f$: displaced volume  
+- $\gamma$: surface tension  
+- $Q$: flow rate (m$^3$/s)  
+- $R$: tube radius, $L$: tube length  
+- $\mu$: viscosity  
 
 ---
 
-### Capacitance
+## Unit 5 – Energy & Work
 
-\[
-C=\frac{Q}{V}
-\qquad
-C=\varepsilon_0\frac{A}{d}
-\qquad
-U=\frac12 CV^2
-\]
+Work:
+$$
+W = F_{\parallel} d
+$$
 
-**Symbols**
-- \(C\): capacitance (F)  
-- \(Q\): charge stored (C)  
-- \(V\): potential difference (V)  
-- \(\varepsilon_0\): permittivity of free space  
-- \(A\): plate area (m\(^2\))  
-- \(d\): plate separation (m)  
-- \(U\): energy stored in capacitor (J)
+Kinetic energy:
+$$
+K = \frac12 mv^2
+$$
 
----
+Gravitational potential energy:
+$$
+U_g = mgy
+$$
 
-### Current & Ohm’s Law
+Spring potential energy:
+$$
+U_s=\frac12 k(\Delta x)^2
+$$
 
-\[
-I=\frac{\Delta Q}{\Delta t}
-\qquad
-V=IR
-\]
+Total mechanical energy:
+$$
+E_{\text{tot}} = K + U + E_{\text{th}} + \dots
+$$
 
 Power:
-
-\[
-P=IV=I^2R=\frac{V^2}{R}
-\]
+$$
+P=\frac{\Delta E}{\Delta t}
+$$
 
 **Symbols**
-- \(I\): current (A)  
-- \(R\): resistance (Ω)  
-- \(P\): power (W)
+- $W$: work (J)  
+- $K$: kinetic energy (J)  
+- $U_g,U_s$: potential energies (J)  
+- $P$: power (W)
 
-Series:
+---
 
-\[
-R_{\text{eq}} = R_1+R_2+\cdots
-\]
+## Unit 6 – Thermodynamics
 
-Parallel:
+Temperature conversion:
+$$
+T(K)=T(^{\circ}C)+273.15
+$$
 
-\[
+Heat:
+$$
+Q=mc\Delta T
+$$
+
+Ideal gas law:
+$$
+PV = Nk_BT = nRT
+$$
+
+Average kinetic energy (ideal gas):
+$$
+K_{\text{avg}}=\frac32 k_B T
+$$
+
+RMS speed:
+$$
+v_{\text{rms}}=\sqrt{\frac{3k_BT}{m}}
+$$
+
+First law:
+$$
+\Delta U = W + Q
+$$
+
+**Symbols**
+- $Q$: heat (J)  
+- $c$: specific heat (J/kg·K)  
+- $n$: moles  
+- $N$: number of molecules  
+- $U$: internal energy (J)
+
+---
+
+# Unit 7 – Electricity & Magnetism
+
+## Coulomb’s Law
+$$
+F_e = k_c\frac{|q_1 q_2|}{r^2}
+$$
+
+**Symbols**
+- $F_e$: electric force (N)  
+- $k_c$: Coulomb constant  
+- $q_1,q_2$: charges (C)  
+- $r$: separation (m)
+
+---
+
+## Electric Field
+$$
+E = k_c\frac{|q|}{r^2}
+$$
+
+$$
+\vec F = q\vec E
+$$
+
+**Symbols**
+- $E$: electric field (N/C or V/m)  
+- $q$: charge (C)  
+- $\vec F$: force on charge (N)
+
+---
+
+## Electric Potential & Energy
+$$
+V = k_c\frac{q}{r}
+$$
+
+$$
+U_e = k_c\frac{q_1 q_2}{r}
+$$
+
+$$
+\Delta U = q\Delta V
+$$
+
+**Symbols**
+- $V$: electric potential (V)  
+- $U_e$: electric potential energy (J)  
+- $\Delta V$: potential difference
+
+---
+
+## Capacitance
+$$
+C=\frac{Q}{V}
+$$
+
+$$
+C=\varepsilon_0\frac{A}{d}
+$$
+
+$$
+U=\frac12 CV^2=\frac12 QV=\frac{Q^2}{2C}
+$$
+
+**Symbols**
+- $C$: capacitance (F)  
+- $Q$: charge stored (C)  
+- $V$: voltage (V)  
+- $\varepsilon_0$: permittivity of free space  
+- $A$: plate area (m$^2$)  
+- $d$: separation (m)  
+- $U$: stored energy (J)
+
+---
+
+## Current & Ohm’s Law
+$$
+I=\frac{\Delta Q}{\Delta t}
+$$
+
+$$
+V = IR
+$$
+
+Power:
+$$
+P = IV = I^2R = \frac{V^2}{R}
+$$
+
+Resistors in series:
+$$
+R_{\text{eq}}=R_1+R_2+\cdots
+$$
+
+Resistors in parallel:
+$$
 \frac1{R_{\text{eq}}}=\frac1{R_1}+\frac1{R_2}+\cdots
-\]
-
----
-
-### Magnetic Force
-
-\[
-F_B=qvB\sin\theta
-\qquad
-F=ILB\sin\theta
-\]
+$$
 
 **Symbols**
-- \(B\): magnetic field (T)  
-- \(\theta\): angle between \(v\) (or \(I\)) and \(B\)
+- $I$: current (A)  
+- $R$: resistance (Ω)  
+- $P$: power (W)
 
 ---
 
-### Magnetic Field from Currents
+## Magnetic Force
+
+Moving charge:
+$$
+F_B=qvB\sin\theta
+$$
+
+Current-carrying wire:
+$$
+F=ILB\sin\theta
+$$
+
+**Symbols**
+- $B$: magnetic field (T)  
+- $\theta$: angle between motion/current and $B$
+
+---
+
+## Magnetic Field from Currents
 
 Long straight wire:
-
-\[
+$$
 B=\frac{\mu_0 I}{2\pi r}
-\]
+$$
 
 Solenoid:
-
-\[
+$$
 B=\mu_0 nI
-\]
+$$
 
 **Symbols**
-- \(\mu_0\): permeability of free space  
-- \(n\): turns per length (1/m)
+- $\mu_0$: permeability of free space  
+- $n$: turns per unit length  
+- $r$: distance from wire
 
 ---
 
-### Magnetic Flux & Induction
-
-\[
+## Magnetic Flux & Induction
+$$
 \Phi_B = BA\cos\theta
-\]
-\[
+$$
+
+Faraday’s Law:
+$$
 \varepsilon = -\frac{d\Phi_B}{dt}
-\]
+$$
 
 **Symbols**
-- \(\Phi_B\): magnetic flux (Wb)  
-- \(\varepsilon\): induced emf (V)
+- $\Phi_B$: magnetic flux (Wb)  
+- $\varepsilon$: induced emf (V)  
+- $A$: area of loop (m$^2$)
 
----
+
