@@ -12,36 +12,49 @@ title: Teaching
 ## Teaching experience
 
 - Graduate Teaching Assistant, Wayne State University  
-  - Introductory physics labs for life-science and pre-med students  
-  - University physics labs for science and engineering majors  
+  - Physics for Life Sciences 1 & 2 (Introductory course for non-majors)
+  - University Physics for Scientists and Engineers 1 & 2 (Introductory course for majors)
+- Lab instructor
+  - Physics for Life Sciences 1 lab (Experiments dealing with directed and random motion at the microscopic level)
+  - Descriptive astronomy (Learning about planetary motion and the night sky using available data)
 
-I enjoy designing explanations, problem sets, and lab activities that connect physics ideas to real-world contexts and
-students' everyday intuition.
 
-## Example: LaTeX-rendered equations
+## Teaching Philosophy 
 
-Inline example: the kinematic equation  
-$s(t) = \frac{1}{2} a t^2 + v_0 t + s_0$.
 
-Display equation:
+The purpose of education is not simply to memorize facts, but to shape how students think. In physics especially, learning should rewire the brain toward critical reasoning, curiosity, and problem-solving. My goal as an educator is to help students engage with the physical world, build logical thinking habits, and leave the classroom more confident in their ability to make sense of complex ideas.
 
-$$
-F = m a
-$$
+#### Building critical thinking through connections
 
-A slightly more complex one:
+To cultivate scientific reasoning, I focus on helping students see connections across topics and develop a “big-picture” view of physics. Traditional learning can feel like isolated islands of knowledge, so I consistently show how ideas relate and build into a coherent framework.
 
-$$
-I = \int_{-\infty}^{\infty} e^{-x^2}\, dx = \sqrt{\pi}
-$$
+One practice I use in every class is spending the first 5–10 minutes revisiting a challenging problem from the previous lecture or homework. We break it into smaller steps, discuss how to choose the right concepts and equations, and reflect on common pitfalls. This routine strengthens understanding while steadily building student confidence.
 
-## Example: showing LaTeX *code* for students to copy
+#### Engagement through collaboration and support
 
-```latex
-\begin{equation}
-s(t) = \frac{1}{2} a t^2 + v_0 t + s_0
-\end{equation}
-```
+Student engagement is central to my teaching. I incorporate group activities and peer learning because students often grasp ideas faster when they explain them to each other. At the same time, I provide individual support through personalized feedback and regular office hours. Balancing collaborative learning with one-on-one guidance ensures every student has multiple ways to succeed.
+
+#### Adapting to diverse learners
+
+Over the past four years, teaching has been one of the most rewarding parts of my graduate life. I’ve worked with both majors and non-majors, and these experiences have taught me how to adapt my approach to different needs.
+
+In **Physics for Life Sciences I & II**, many students come from biology or medical backgrounds with limited math preparation. I introduce concepts in a math-light way at first, then gradually bring in the necessary tools—like vectors—so they can confidently handle forces and Newton’s laws.
+
+In **University Physics for Scientists and Engineers I & II**, the focus shifts toward a deeper theoretical foundation. Rather than jumping straight into formulas, I guide students through the physical reasoning that leads to the mathematics, helping them appreciate why the equations look the way they do.
+
+In laboratory courses, I emphasize hands-on learning and real-time data analysis so students can connect abstract ideas to measurable experience. Tools such as interactive simulations (e.g., PhET) further help students with different levels of familiarity engage meaningfully with the material.
+
+#### Creating an inclusive, compassionate classroom
+
+An inclusive and supportive classroom environment is essential to learning. I strive to develop equitable practices that resonate with students from diverse backgrounds and ensure that all students feel seen, valued, and capable. My graduate coursework in college-level teaching has strengthened my ability to design learning spaces that welcome different perspectives and learning styles.
+
+I also believe effective teaching must be grounded in compassion and patience. Learning is a journey, and students grow best when they feel safe to struggle, ask questions, and improve at their own pace. I aim to meet students where they are, encourage them through challenges, and give them the grace to learn without fear.
+
+#### Continual growth and motivation
+
+I am committed to improving as an educator by staying informed about pedagogical innovations and thoughtfully integrating them into my teaching. What motivates me most is seeing the moment when a student finally “gets it”—whether it’s understanding why the sky is blue or realizing how Newton’s laws shape everyday life.
+
+Those moments remind me why I teach. With the right guidance, every student can grow into a curious, logical thinker prepared to engage the world with rigor and wonder. My commitment is to help students grow not only academically, but also as confident, critical individuals ready to explore the universe through physics.
 
 
 
