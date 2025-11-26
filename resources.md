@@ -8,7 +8,7 @@ permalink: /resources/
   <a class="resource-card" href="{{ '/resources/physics-equations/' | relative_url }}">
     <div class="resource-card-title">Physics Equations</div>
     <div class="resource-card-subtitle">
-      PHY 2130 / 2140 equation sheets, derivations, examples
+      PHY 2130 / 2140 equation sheet
     </div>
   </a>
 </div>
