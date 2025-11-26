@@ -13,6 +13,15 @@ permalink: /resources/
   </a>
 </div>
 
+<div class="resources-grid">
+  <a class="resource-card" href="{{ '/resources/physics-equations/' | relative_url }}">
+    <div class="resource-card-title">Physics-Lab notes</div>
+    <div class="resource-card-subtitle">
+      Lab notes
+    </div>
+  </a>
+</div>
+
 <hr>
 
 <section class="resources-contact-footer">
