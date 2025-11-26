@@ -14,10 +14,14 @@ permalink: /resources/
 </div>
 
 <div class="resources-grid">
-  <a class="resource-card" href="{{ '/resources/physics-equations/' | relative_url }}">
-    <div class="resource-card-title">Physics-Lab notes</div>
+  <a class="resource-card" href="{{ '/resources/lab-notes/' | relative_url }}">
+    <div class="resource-card-title">Physics Lab Notes</div>
     <div class="resource-card-subtitle">
-      Lab notes
+      <img
+        src="{{ '/assets/img/404-southpark.jpg' | relative_url }}"
+        alt="Nothing to see here"
+        style="max-width: 100%; border-radius: 10px; display:block; margin: 0 auto;"
+      >
     </div>
   </a>
 </div>
