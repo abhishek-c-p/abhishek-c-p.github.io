@@ -17,7 +17,7 @@ permalink: /resources/
   <a class="resource-card" href="{{ '/resources/lab-notes/' | relative_url }}">
     <div class="resource-card-title">Physics Lab Notes</div>
     <div class="resource-card-subtitle">
-      Lab notes (coming soon)
+      Lab notes-PHY 2131
     </div>
   </a>
 </div>
