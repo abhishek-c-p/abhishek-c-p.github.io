@@ -20,6 +20,7 @@ mathjax: false
 </script>
 
 <!-- MathJax v3 (NO async; order matters) -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
