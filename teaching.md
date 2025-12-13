@@ -18,70 +18,13 @@ title: Teaching
   - Physics for Life Sciences 1 lab (Experiments dealing with directed and random motion at the microscopic level)
   - Descriptive astronomy (Learning about planetary motion and the night sky using available data)
 
-
-
-
-<style>
-  .testimonial-marquee {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding: 1rem 0;
-    margin-top: 0.5rem;
-
-    /* soft fade at edges */
-    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-  }
-
-  .testimonial-track {
-    display: flex;
-    gap: 1.5rem;
-    width: max-content;
-    animation: testimonial-scroll 140s linear infinite;
-    align-items: center;
-  }
-
-  .testimonial-track img {
-    height: 260px;
-    width: auto;
-    border-radius: 14px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
-    transition: transform 0.2s ease;
-  }
-
-  .testimonial-track img:hover {
-    transform: translateY(-4px) scale(1.02);
-  }
-
-  @keyframes testimonial-scroll {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .testimonial-track { animation: none; }
-  }
-
-  @media (max-width: 768px) {
-    .testimonial-track img { height: 200px; }
-  }
-</style>
-
-<div class="testimonial-marquee" aria-label="Student teaching evaluations carousel">
-  <div class="testimonial-track">
-    {% for i in (1..20) %}
-      {% if i < 10 %}
-        {% assign num = "0" | append: i %}
-      {% else %}
-        {% assign num = i %}
-      {% endif %}
-      <img src="/assets/img/testimonials/quote_dark_wsu_{{ num }}.jpg"
-           alt="Student teaching evaluation {{ i }}">
-    {% endfor %}
-
-</div>
-
+<p>
+  <a class="rmp-btn"
+     href="https://www.ratemyprofessors.com/professor/2948373"
+     target="_blank" rel="noopener noreferrer">
+    View my RateMyProfessors page →
+  </a>
+</p>
 
 ## Teaching Philosophy 
 
