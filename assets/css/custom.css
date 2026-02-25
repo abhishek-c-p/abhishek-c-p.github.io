@@ -577,3 +577,18 @@ footer .fa-stack-2x {
   box-shadow: 0 0 18px rgba(255,127,229,0.9);
   transform: translateY(-1px);
 }
+
+/* Justify paragraphs + lists inside the main content column */
+main .row > div p,
+main .row > div li {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Optional: on phones, justify can look weird */
+@media (max-width: 768px) {
+  main .row > div p,
+  main .row > div li {
+    text-align: left;
+  }
+}
