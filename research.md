@@ -25,8 +25,4 @@ My current and recent research interests include:
 - Numerical evaluation of free energy and supercurrent from spectra
 - Analytical models for short and long junction limits
 
-## Broader interests
 
-- Heat and charge transport in hybrid superconducting devices
-- Possible connections between non-reciprocal transport and thermodynamic / geometric viewpoints
-- Physics education for life-science and pre-med students
