@@ -112,6 +112,23 @@ Those moments remind me why I teach. With the right guidance, every student can 
   }
 </style>
 
+<style>
+/* Justify paragraph text on this page */
+.page-content p,
+.page-content li {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Optional: avoid weird spacing on very narrow screens */
+@media (max-width: 768px) {
+  .page-content p,
+  .page-content li {
+    text-align: left;
+  }
+}
+</style>
+
 <div class="testimonial-marquee" aria-label="Student teaching evaluations carousel">
   <div class="testimonial-track">
     {% for i in (1..20) %}
