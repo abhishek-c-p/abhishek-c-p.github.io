@@ -37,6 +37,11 @@ navbar-links:
   Resources: "resources"
   CV: "doc/Abhishek_CV__teaching (1).pdf"
 
+exclude_from_navbar:
+  - about
+  - about.md
+  - aboutme
+  - aboutme.md
 ################
 # --- Logo --- #
 ################
