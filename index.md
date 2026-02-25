@@ -24,7 +24,6 @@ permalink: /
         <i class="fas fa-envelope"></i>
       </a>
     
-    
       <a href="https://linkedin.com/in/abhishekcp" target="_blank" aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
@@ -56,6 +55,17 @@ permalink: /
       electron gases, with Rashba and Dresselhaus spin–orbit coupling, in-plane magnetic fields, 
       and crystalline anisotropy. I use tight-binding simulations (Kwant) and analytical 
       approaches to understand how symmetry breaking controls critical-current asymmetry.
+    </p>
+
+    <p>
+      Before moving to Detroit for my PhD, I completed my studies in India. Coming from a
+      non-privileged background, I care deeply about making physics education more accessible
+      for first-generation and non-traditional students.
+    </p>
+
+    <p>
+      Outside of research, I enjoy teaching, building clear physics explanations for life-science
+      students, and creating visualizations and simple simulations to communicate ideas.
     </p>
 
     <div class="home-two-col">
