@@ -63,7 +63,22 @@ I am committed to improving as an educator by staying informed about pedagogical
 
 Those moments remind me why I teach. With the right guidance, every student can grow into a curious, logical thinker prepared to engage the world with rigor and wonder. My commitment is to help students grow not only academically, but also as confident, critical individuals ready to explore the universe through physics.
 
+<style>
+/* Justify paragraph text on this page */
+.page-content p,
+.page-content li {
+  text-align: justify;
+  text-justify: inter-word;
+}
 
+/* Optional: avoid weird spacing on very narrow screens */
+@media (max-width: 768px) {
+  .page-content p,
+  .page-content li {
+    text-align: left;
+  }
+}
+</style>
 
 <style>
   .testimonial-marquee {
@@ -112,22 +127,7 @@ Those moments remind me why I teach. With the right guidance, every student can 
   }
 </style>
 
-<style>
-/* Justify paragraph text on this page */
-.page-content p,
-.page-content li {
-  text-align: justify;
-  text-justify: inter-word;
-}
 
-/* Optional: avoid weird spacing on very narrow screens */
-@media (max-width: 768px) {
-  .page-content p,
-  .page-content li {
-    text-align: left;
-  }
-}
-</style>
 
 <div class="testimonial-marquee" aria-label="Student teaching evaluations carousel">
   <div class="testimonial-track">
