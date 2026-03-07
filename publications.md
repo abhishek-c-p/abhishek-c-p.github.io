@@ -12,8 +12,9 @@ title: Publications & Preprints
 
 ## Preprints & publications
 
-- **[Title of your paper]**  
-  Abhishek C P, [co-authors]  
+- **Signatures of Topological Superconductivity and Josephson Diode Effects on the Magnetocurrent-Phase
+Relation of Planar Josephson Junctions**  
+  B. Pekerten, A. C. Prasannan, A. Matos-Abiague  
   *Journal / arXiv identifier, year.*  
   [Optional: link to paper]
 
@@ -21,5 +22,5 @@ title: Publications & Preprints
 
 ## In preparation
 
-- **[Working title for your SDE / Josephson junction project]**  
+- **Crystalline Anisotropic Josephson Diode Effect **  
   Theoretical study of the superconducting diode effect in planar Josephson junctions with Rashba–Dresselhaus spin–orbit coupling.
