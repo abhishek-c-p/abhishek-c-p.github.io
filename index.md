@@ -58,8 +58,7 @@ permalink: /
     </p>
 
     <p>
-      Before moving to Detroit for my PhD, I completed my studies in India. Coming from a
-      non-privileged background, I care deeply about making physics education more accessible
+      Before moving to Detroit for my PhD, I completed my studies in India. I care deeply about making physics education more accessible
       for first-generation and non-traditional students.
     </p>
 
