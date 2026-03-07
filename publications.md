@@ -22,5 +22,5 @@ Relation of Planar Josephson Junctions**
 
 ## In preparation
 
-- **Crystalline Anisotropic Josephson Diode Effect **  
+- **Crystalline Anisotropic Josephson Diode Effect**  
   Theoretical study of the superconducting diode effect in planar Josephson junctions with Rashba–Dresselhaus spin–orbit coupling.
