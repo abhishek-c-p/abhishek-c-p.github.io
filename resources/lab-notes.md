@@ -5,7 +5,7 @@ permalink: /resources/lab-notes/
 ---
 
 <p style="margin-bottom: 1rem;">
-  <a href="{{ '/assets/doc/PHY-2131LabNotes.pdf' | relative_url }}" target="_blank">
+  <a href="{{ '/doc/PHY-2131LabNotes.pdf' | relative_url }}" target="_blank">
     Open PDF in new tab
   </a>
 </p>
