@@ -31,7 +31,7 @@ mathjax: false
 
 <div style="width: 100%; height: 90vh;">
   <iframe
-    src="{{ '/doc/PHY_2131LabNotes.pdf' | relative_url }}"
+    src="{{ '/doc/2130_equation_sheet.pdf' | relative_url }}"
     width="100%"
     height="100%"
     style="border: 1px solid #ccc; border-radius: 8px;">
