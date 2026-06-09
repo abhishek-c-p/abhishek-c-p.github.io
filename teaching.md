@@ -19,16 +19,6 @@ title: Teaching
   - Physics for Life Sciences 1 lab (Experiments dealing with directed and random motion at the microscopic level)
   - Descriptive astronomy (Learning about planetary motion and the night sky using available data)
 
-<p>
-  <a class="rmp-btn"
-     href="https://www.ratemyprofessors.com/professor/2948373"
-     target="_blank" rel="noopener noreferrer">
-    View my RateMyProfessors page →
-  </a>
-</p>
-
-
-
 
 ## Teaching Philosophy 
 
@@ -83,6 +73,18 @@ Those moments remind me why I teach. With the right guidance, every student can 
   }
 }
 </style>
+
+
+
+<p>
+  <a class="rmp-btn"
+     href="https://www.ratemyprofessors.com/professor/2948373"
+     target="_blank" rel="noopener noreferrer">
+    View my RateMyProfessors page →
+  </a>
+</p>
+
+
 
 <style>
   .testimonial-marquee {
