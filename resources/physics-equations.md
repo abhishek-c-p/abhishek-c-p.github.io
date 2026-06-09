@@ -22,6 +22,23 @@ mathjax: false
 <!-- MathJax v3 (NO async; order matters) -->
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+
+<p style="margin-bottom: 1rem;">
+  <a href="{{ '/doc/2130_equation_sheet.pdf' | relative_url }}" target="_blank">
+    Open PDF in new tab
+  </a>
+</p>
+
+<div style="width: 100%; height: 90vh;">
+  <iframe
+    src="{{ '/doc/PHY_2131LabNotes.pdf' | relative_url }}"
+    width="100%"
+    height="100%"
+    style="border: 1px solid #ccc; border-radius: 8px;">
+  </iframe>
+</div>
+
+
 # Physics Equations (PHY 2130 / 2140)
 
 Below is a compact equation sheet for Physics 1 students.  
@@ -610,18 +627,3 @@ r(\text{m}) = r(\text{pixels})\times 0.193\times 10^{-6}
 $$
 
 
-
-<p style="margin-bottom: 1rem;">
-  <a href="{{ '/doc/PHY_2131LabNotes.pdf' | relative_url }}" target="_blank">
-    Open PDF in new tab
-  </a>
-</p>
-
-<div style="width: 100%; height: 90vh;">
-  <iframe
-    src="{{ '/doc/PHY_2131LabNotes.pdf' | relative_url }}"
-    width="100%"
-    height="100%"
-    style="border: 1px solid #ccc; border-radius: 8px;">
-  </iframe>
-</div>
