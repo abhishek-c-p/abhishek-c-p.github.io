@@ -10,7 +10,8 @@ title: Teaching
 </script>
 
 ## Teaching experience
-
+- Lecturer
+  - Physics for Life Sciences 1 (Introductory course for non-majors)
 - Graduate Teaching Assistant, Wayne State University  
   - Physics for Life Sciences 1 & 2 (Introductory course for non-majors)
   - University Physics for Scientists and Engineers 1 & 2 (Introductory course for majors)
@@ -25,6 +26,81 @@ title: Teaching
     View my RateMyProfessors page →
   </a>
 </p>
+
+
+<style>
+  .testimonial-marquee {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+
+    /* soft fade at edges */
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+
+  .testimonial-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: testimonial-scroll 140s linear infinite;
+    align-items: center;
+  }
+
+  .testimonial-track img {
+    height: 260px;
+    width: auto;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+    transition: transform 0.2s ease;
+  }
+
+  .testimonial-track img:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+
+  @keyframes testimonial-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .testimonial-track { animation: none; }
+  }
+
+  @media (max-width: 768px) {
+    .testimonial-track img { height: 200px; }
+  }
+</style>
+
+
+
+<div class="testimonial-marquee" aria-label="Student teaching evaluations carousel">
+  <div class="testimonial-track">
+    {% for i in (1..20) %}
+      {% if i < 10 %}
+        {% assign num = "0" | append: i %}
+      {% else %}
+        {% assign num = i %}
+      {% endif %}
+      <img src="/assets/img/testimonials/quote_dark_wsu_{{ num }}.jpg"
+           alt="Student teaching evaluation {{ i }}">
+    {% endfor %}
+
+    <!-- Duplicate for seamless loop -->
+    {% for i in (1..20) %}
+      {% if i < 10 %}
+        {% assign num = "0" | append: i %}
+      {% else %}
+        {% assign num = i %}
+      {% endif %}
+      <img src="/assets/img/testimonials/quote_dark_wsu_{{ num }}.jpg" alt="">
+    {% endfor %}
+  </div>
+</div>
+
 
 ## Teaching Philosophy 
 
@@ -43,7 +119,7 @@ Student engagement is central to my teaching. I incorporate group activities and
 
 #### Adapting to diverse learners
 
-Over the past four years, teaching has been one of the most rewarding parts of my graduate life. I’ve worked with both majors and non-majors, and these experiences have taught me how to adapt my approach to different needs.
+Over the past five years, teaching has been one of the most rewarding parts of my graduate life. I’ve worked with both majors and non-majors, and these experiences have taught me how to adapt my approach to different needs.
 
 In **Physics for Life Sciences I & II**, many students come from biology or medical backgrounds with limited math preparation. I introduce concepts in a math-light way at first, then gradually bring in the necessary tools—like vectors—so they can confidently handle forces and Newton’s laws.
 
