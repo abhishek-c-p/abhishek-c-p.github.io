@@ -10,17 +10,14 @@ title: Publications & Preprints
   </a>
 </div>
 
-## Preprints & publications
+## Preprints & Publications
 
-- **Signatures of Topological Superconductivity and Josephson Diode Effects on the Magnetocurrent-Phase
-Relation of Planar Josephson Junctions**  
-  B. Pekerten, A. C. Prasannan, A. Matos-Abiague  
-  *Journal / arXiv identifier, year.*  
-  [Optional: link to paper]
+- **[1] Anisotropic Superconducting Diode Effect in Planar Josephson Junctions**  
+  **_A. C. Prasannan_**, B. Pekerten, N. Alashkar, A. Matos-Abiague  
+  *Submitted to Physical Review B, 2026*  
+  [arXiv:2604.17594](https://doi.org/10.48550/arXiv.2604.17594)
 
-
-
-## In preparation
-
-- **Crystalline Anisotropic Josephson Diode Effect**  
-  Theoretical study of the superconducting diode effect in planar Josephson junctions with Rashba–Dresselhaus spin–orbit coupling.
+- **[2] Signatures of Topological Superconductivity and Josephson Diode Effects on the Magnetocurrent-Phase Relation of Planar Josephson Junctions**  
+  B. Pekerten, **_A. C. Prasannan_**, A. Matos-Abiague  
+  *Submitted to Physical Review B, 2026*  
+  [arXiv:2603.07638](https://doi.org/10.48550/arXiv.2603.07638)
