@@ -4,14 +4,14 @@ title: Resources
 permalink: /resources/
 ---
 
-<div class="resources-grid">
+<!-- <div class="resources-grid">
   <a class="resource-card" href="{{ '/resources/hookes-law/' | relative_url }}">
     <div class="resource-card-title">Hooke's Law</div>
     <div class="resource-card-subtitle">
       Hooke's Law Notes
     </div>
   </a>
-</div>
+</div> -->
 
 
 
