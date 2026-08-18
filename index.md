@@ -12,28 +12,27 @@ permalink: /
     <img class="home-avatar" src="/assets/img/abhishek.jpeg" alt="Abhishek C P">
 
     <h1 class="home-name">Abhishek C P</h1>
-    <div class="home-role">PhD Candidate in Physics</div>
+    <div class="home-role">Teaching Fellow of Physics</div>
 
     <div class="home-affil">
-      Wayne State University<br>
-      Detroit, MI, USA
+      Schreiner University<br>
+      Kerrville, TX, USA
     </div>
 
     <div class="home-socials">
       <a href="mailto:abhishekcp.research@gmail.com" aria-label="Email">
         <i class="fas fa-envelope"></i>
       </a>
-    
-      <a href="https://linkedin.com/in/abhishekcp" target="_blank" aria-label="LinkedIn">
+
+      <a href="https://linkedin.com/in/abhishekcp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
-    
-      <a href="https://instagram.com/_abhishekcp" target="_blank" aria-label="Instagram">
+
+      <a href="https://instagram.com/_abhishekcp" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
-    
-      <!-- Google Scholar -->
-      <a href="https://scholar.google.com/citations?user=8xDkAz8AAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
+
+      <a href="https://scholar.google.com/citations?user=8xDkAz8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
         <i class="fas fa-graduation-cap"></i>
       </a>
     </div>
@@ -42,54 +41,63 @@ permalink: /
 
   <!-- RIGHT COLUMN -->
   <div class="home-about-right">
-    <h2></h2>
 
     <p>
-      I am a PhD candidate in Physics at Wayne State University in Detroit, Michigan USA. 
-      My research is in theoretical condensed matter physics, focusing on superconductivity 
-      and non-reciprocal transport in planar Josephson junctions.
+      I am a physicist and educator currently serving as a Teaching Fellow of Physics
+      at Schreiner University in Kerrville, Texas. I earned my Ph.D. in Physics from
+      Wayne State University, where my research focused on theoretical and computational
+      condensed matter physics.
     </p>
 
     <p>
-      I work on models of the superconducting diode effect in proximitized two-dimensional 
-      electron gases, with Rashba and Dresselhaus spin–orbit coupling, in-plane magnetic fields, 
-      and crystalline anisotropy. I use tight-binding simulations (Kwant) and analytical 
-      approaches to understand how symmetry breaking controls critical-current asymmetry.
+      My doctoral research investigated non-reciprocal superconducting transport in
+      semiconductor-superconductor hybrid systems, with particular emphasis on the
+      superconducting diode effect in planar Josephson junctions. My work explored the
+      roles of Rashba and Dresselhaus spin-orbit coupling, in-plane magnetic fields,
+      crystalline anisotropy, electrostatic gating, and disorder in controlling
+      critical-current asymmetry.
     </p>
 
     <p>
-      Before moving to Detroit for my PhD, I completed my studies in India. I care deeply about making physics education more accessible
-      for first-generation and non-traditional students.
+      I use a combination of tight-binding simulations, quantum transport calculations,
+      and analytical models to study how symmetry breaking and microscopic material
+      properties influence superconducting and electronic transport in low-dimensional
+      quantum systems.
     </p>
 
     <p>
-      Outside of research, I enjoy teaching, building clear physics explanations for life-science
-      students, and creating visualizations and simple simulations to communicate ideas.
+      Alongside research, I am deeply interested in physics education. I enjoy developing
+      intuitive, concept-driven approaches to introductory physics and creating
+      visualizations, simulations, and teaching materials that help students connect
+      mathematical ideas with physical intuition.
     </p>
 
     <div class="home-two-col">
+
       <div>
-        <h3>Interests</h3>
+        <h3>Research Interests</h3>
         <ul>
-          <li>Superconductivity & Josephson junctions</li>
-          <li>Superconducting diode effect (SDE)</li>
-          <li>Spin–orbit coupling in 2DEGs</li>
-          <li>Quantum transport simulations</li>
+          <li>Condensed matter physics</li>
+          <li>Quantum and mesoscopic transport</li>
+          <li>Superconductivity and Josephson junctions</li>
+          <li>Semiconductor-superconductor hybrid systems</li>
+          <li>Spin-orbit coupling and spin-dependent transport</li>
+          <li>Computational and theoretical modeling of quantum systems</li>
         </ul>
       </div>
 
       <div>
         <h3>Education</h3>
         <ul>
-          <li>PhD. Physics, Wayne State University (ongoing)</li>
+          <li>Ph.D. Physics, Wayne State University, 2026</li>
           <li>M.S. Physics, Wayne State University, Michigan, USA</li>
           <li>M.Sc. Physics, Mahatma Gandhi University, Kerala, India</li>
           <li>B.Sc. Physics, Mahatma Gandhi University, Kerala, India</li>
         </ul>
       </div>
+
     </div>
+
   </div>
 
 </div>
-
-
