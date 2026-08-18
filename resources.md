@@ -63,7 +63,7 @@ permalink: /resources/
     <div class="rcf-info">
       <h3>Contact</h3>
       <p>
-        Detroit, MI, USA<br>
+        Kerrville, TX, USA<br>
         <a href="mailto:abhishekcp.research@gmail.com">
           abhishekcp.research@gmail.com
         </a>
